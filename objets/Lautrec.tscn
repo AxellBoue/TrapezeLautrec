@@ -1,0 +1,109 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://scripts/Lautrec.gd" type="Script" id=1]
+[ext_resource path="res://sprites/lautrec/lautreciddle.png" type="Texture" id=2]
+[ext_resource path="res://sprites/leotard/transformation.png" type="Texture" id=3]
+[ext_resource path="res://sprites/leotard/balance1.png" type="Texture" id=4]
+[ext_resource path="res://sprites/leotard/balance2.png" type="Texture" id=5]
+[ext_resource path="res://sprites/leotard/balance3.png" type="Texture" id=6]
+[ext_resource path="res://sprites/leotard/balance4.png" type="Texture" id=7]
+[ext_resource path="res://sprites/leotard/balance5.png" type="Texture" id=8]
+[ext_resource path="res://sprites/leotard/balance6.png" type="Texture" id=9]
+[ext_resource path="res://sprites/leotard/accroche1.png" type="Texture" id=10]
+[ext_resource path="res://sprites/leotard/accroche2.png" type="Texture" id=11]
+[ext_resource path="res://sprites/leotard/saut1.png" type="Texture" id=12]
+[ext_resource path="res://sprites/leotard/saut2.png" type="Texture" id=13]
+[ext_resource path="res://sprites/leotard/saut3.png" type="Texture" id=14]
+[ext_resource path="res://sprites/leotard/saut4.png" type="Texture" id=15]
+[ext_resource path="res://sprites/leotard/saut5.png" type="Texture" id=16]
+[ext_resource path="res://sprites/lautrec/lautrecmarche1.png" type="Texture" id=17]
+[ext_resource path="res://sprites/lautrec/lautrecmarche2.png" type="Texture" id=18]
+[ext_resource path="res://sprites/lautrec/lautrecmarche3.png" type="Texture" id=19]
+[ext_resource path="res://sprites/lautrec/lautrecmarche4.png" type="Texture" id=20]
+[ext_resource path="res://sprites/lautrec/lautrecTombe.png" type="Texture" id=21]
+[ext_resource path="res://icon.png" type="Texture" id=22]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 20.0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": false,
+"name": "LautrecIdle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "transformation",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "LeoBalance",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": false,
+"name": "LeoAccroche",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "LeoSaute",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "lautrecMarche",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": false,
+"name": "lautrecTombe",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "corde",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 19.0669, 5.80933 )
+
+[node name="Lautrec" type="KinematicBody2D"]
+script = ExtResource( 1 )
+vitesse = 150
+decalageTrapeze = Vector2( 207, -169 )
+offsetPieds = Vector2( 0, -46 )
+offsetTrapeze = Vector2( 12, 57 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "LautrecIdle"
+playing = true
+offset = Vector2( 0, -46 )
+
+[node name="capteSol" type="Area2D" parent="."]
+position = Vector2( 0, 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="capteSol"]
+shape = SubResource( 3 )
+
+[node name="Polygon2D" type="Polygon2D" parent="capteSol"]
+visible = false
+color = Color( 0.513726, 0.298039, 0.490196, 1 )
+polygon = PoolVector2Array( -19.4233, -5.80933, -18.6686, 5.13394, 19.8216, 5.51132, 19.0669, -5.80933 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = "pas"
+
+[node name="targetCamera" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 22 )
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="body_entered" from="capteSol" to="." method="_on_capteSol_body_entered"]

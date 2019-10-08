@@ -1,0 +1,912 @@
+[gd_scene load_steps=77 format=2]
+
+[ext_resource path="res://scripts/soundManager.gd" type="Script" id=1]
+[ext_resource path="res://scripts/narrationManager.gd" type="Script" id=2]
+[ext_resource path="res://scripts/cameraBox.gd" type="Script" id=3]
+[ext_resource path="res://sprites/textes/Sous titre-1.png" type="Texture" id=4]
+[ext_resource path="res://sprites/textes/Sous titre-2.png" type="Texture" id=5]
+[ext_resource path="res://sprites/textes/Sous titre-3.png" type="Texture" id=6]
+[ext_resource path="res://objets/Lautrec.tscn" type="PackedScene" id=7]
+[ext_resource path="res://objets/zoneCamera.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scripts/interactions/chapeaux.gd" type="Script" id=9]
+[ext_resource path="res://sprites/decor/chapeauxFleurs/hommedroitestatic.png" type="Texture" id=10]
+[ext_resource path="res://sprites/decor/chapeauxFleurs/hommedroitefleur1.png" type="Texture" id=11]
+[ext_resource path="res://sprites/decor/chapeauxFleurs/hommedroitefleur2.png" type="Texture" id=12]
+[ext_resource path="res://sprites/decor/chapeauxFleurs/hommedroitefleur3.png" type="Texture" id=13]
+[ext_resource path="res://sprites/decor/chapeauxFleurs/hommedroitefleur4.png" type="Texture" id=14]
+[ext_resource path="res://sprites/decor/chapeauxFleurs/hommegauchestatic.png" type="Texture" id=15]
+[ext_resource path="res://sprites/decor/chapeauxFleurs/hommegauchefleur1.png" type="Texture" id=16]
+[ext_resource path="res://sprites/decor/chapeauxFleurs/hommegauchefleur2.png" type="Texture" id=17]
+[ext_resource path="res://sprites/decor/chapeauxFleurs/hommegauchefleur3.png" type="Texture" id=18]
+[ext_resource path="res://sprites/decor/chapeauxFleurs/hommegauchefleur4.png" type="Texture" id=19]
+[ext_resource path="res://objets/objInteractif.tscn" type="PackedScene" id=20]
+[ext_resource path="res://objets/feedback.tscn" type="PackedScene" id=21]
+[ext_resource path="res://sprites/decor/ilot 1/1plan.png" type="Texture" id=22]
+[ext_resource path="res://sprites/decor/ilot 1/2plan.png" type="Texture" id=23]
+[ext_resource path="res://sprites/decor/ilot 1/3planbis.png" type="Texture" id=24]
+[ext_resource path="res://sprites/decor/ilot 1/3plan.png" type="Texture" id=25]
+[ext_resource path="res://sprites/decor/ilot 1/4plan.png" type="Texture" id=26]
+[ext_resource path="res://sprites/decor/ilot 1/5plan.png" type="Texture" id=27]
+[ext_resource path="res://sprites/decor/ilot 1/5planbis.png" type="Texture" id=28]
+[ext_resource path="res://sprites/decor/ilot 1/5plantres.png" type="Texture" id=29]
+[ext_resource path="res://sprites/decor/ilot 1/activation plan 5/5planactivation3.png" type="Texture" id=30]
+[ext_resource path="res://sprites/decor/ilot 1/activation plan 5/5planactivation4.png" type="Texture" id=31]
+[ext_resource path="res://sprites/decor/ilot 1/activation plan 5/5planactivation1.png" type="Texture" id=32]
+[ext_resource path="res://sprites/decor/ilot 1/activation plan 5/5planactivation2.png" type="Texture" id=33]
+[ext_resource path="res://scripts/interactions/LaMain.gd" type="Script" id=34]
+[ext_resource path="res://objets/capte leotard.tscn" type="PackedScene" id=35]
+[ext_resource path="res://sprites/decor/ilot 1/dernierplan.png" type="Texture" id=36]
+[ext_resource path="res://sprites/decor/fondationzone.png" type="Texture" id=37]
+[ext_resource path="res://scripts/interactions/table.gd" type="Script" id=38]
+[ext_resource path="res://sprites/lautrec interactions/lautrecassis.png" type="Texture" id=39]
+[ext_resource path="res://sprites/lautrec interactions/table.png" type="Texture" id=40]
+[ext_resource path="res://sprites/lautrec interactions/chaiselautrec.png" type="Texture" id=41]
+[ext_resource path="res://sons/chaise.wav" type="AudioStream" id=42]
+[ext_resource path="res://scripts/interactions/gramaphone.gd" type="Script" id=43]
+[ext_resource path="res://sprites/lautrec interactions/gramophone1.png" type="Texture" id=44]
+[ext_resource path="res://sprites/lautrec interactions/gramophone2.png" type="Texture" id=45]
+[ext_resource path="res://scripts/interactions/corde.gd" type="Script" id=46]
+[ext_resource path="res://sprites/lautrec interactions/corde.png" type="Texture" id=47]
+[ext_resource path="res://objets/zoneCollQueAPieds.tscn" type="PackedScene" id=48]
+[ext_resource path="res://sprites/decor/ilot2cirque/léotard.jpg" type="Texture" id=49]
+[ext_resource path="res://sprites/decor/ilot2cirque/chapiteau-3.png" type="Texture" id=50]
+[ext_resource path="res://sprites/decor/ilot2cirque/chevalet.png" type="Texture" id=51]
+[ext_resource path="res://sprites/decor/ilot2cirque/vivid-colors-fragment-arena-circus-kyiv-171667.png" type="Texture" id=52]
+[ext_resource path="res://sprites/decor/ilot2cirque/Henri_de_Toulouse-Lautrec_-_At_the_Circus_-_Free_Horses_-_Walters_372523.png" type="Texture" id=53]
+[ext_resource path="res://sprites/decor/ilot2cirque/Sans titre-2.png" type="Texture" id=54]
+[ext_resource path="res://sprites/decor/ilot2cirque/taches.png" type="Texture" id=55]
+[ext_resource path="res://sprites/decor/ilot2cirque/taches 2.png" type="Texture" id=56]
+[ext_resource path="res://sprites/decor/ilot cancan/cancandroit.png" type="Texture" id=57]
+[ext_resource path="res://sprites/decor/ilot cancan/cancangauche.png" type="Texture" id=58]
+[ext_resource path="res://sprites/decor/dessins cirque/Cirque1.jpg" type="Texture" id=59]
+[ext_resource path="res://objets/zoneLoop.tscn" type="PackedScene" id=60]
+[ext_resource path="res://sprites/decor/ilot1 vieux/dernierplan.png" type="Texture" id=61]
+[ext_resource path="res://sprites/lautrec interactions/queen moyen.jpg" type="Texture" id=62]
+[ext_resource path="res://sprites/decor/ilot cancan/Cancan(1).png" type="Texture" id=63]
+[ext_resource path="res://sprites/decor/dessins cirque/Cirque2.jpg" type="Texture" id=64]
+[ext_resource path="res://sprites/decor/dessins cirque/Cirque4.jpg" type="Texture" id=65]
+[ext_resource path="res://sprites/decor/fond.jpg" type="Texture" id=66]
+[ext_resource path="res://sprites/decor/ilot1 vieux/2planbis.png" type="Texture" id=67]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 10 ) ],
+"loop": false,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 14 ) ],
+"loop": false,
+"name": "ouvre",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 15 ) ],
+"loop": false,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 18 ) ],
+"loop": false,
+"name": "ouvre",
+"speed": 5.0
+} ]
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/2plan2.png-13bf82e03a5a27b78fa832fa9a0a12bb.stex"
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 24 ) ],
+"loop": true,
+"name": "ouvert",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ) ],
+"loop": false,
+"name": "ferme",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "bouge",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "boucleFin",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 33 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 31 ) ],
+"loop": false,
+"name": "interaction",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=6]
+length = 15.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 3.5, 8.5, 11.4, 14.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"values": [ {
+"args": [ 0 ],
+"method": "anim_texte_1"
+}, {
+"args": [ 1 ],
+"method": "anim_texte_1"
+}, {
+"args": [ 2 ],
+"method": "anim_texte_1"
+}, {
+"args": [ 3 ],
+"method": "anim_texte_1"
+} ]
+}
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 44 ) ],
+"loop": false,
+"name": "eteint",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 44 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "joue",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=8]
+resource_name = "bouge"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("cordeSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -3 ), Vector2( 0, 20 ), Vector2( 0, -3 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "apres_anim"
+} ]
+}
+
+[sub_resource type="Animation" id=9]
+tracks/0/type = "value"
+tracks/0/path = NodePath("cordeSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="gameManager" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="soundManager" type="Node2D" parent="gameManager"]
+editor/display_folded = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ASP cabaret" type="AudioStreamPlayer2D" parent="gameManager/soundManager"]
+position = Vector2( 757.555, 357.58 )
+max_distance = 1500.0
+attenuation = 2.54912
+
+[node name="ASP voix" type="AudioStreamPlayer" parent="gameManager/soundManager"]
+bus = "voix"
+
+[node name="ASP bruits" type="AudioStreamPlayer2D" parent="gameManager/soundManager"]
+position = Vector2( 1089.09, 239.736 )
+max_distance = 1500.0
+attenuation = 2.54912
+bus = "bruits"
+
+[node name="narrationManager" type="Node2D" parent="gameManager"]
+editor/display_folded = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Timer" type="Timer" parent="gameManager/narrationManager"]
+
+[node name="cameraBox" type="Node2D" parent="gameManager"]
+editor/display_folded = true
+position = Vector2( 1023.43, 233.522 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="gameManager/cameraBox"]
+current = true
+zoom = Vector2( 0.7, 0.7 )
+
+[node name="moyenne" type="Node2D" parent="gameManager/cameraBox"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+editor/display_folded = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="texte 1" type="TextureRect" parent="CanvasLayer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -60.0
+margin_bottom = 10.0
+texture = ExtResource( 4 )
+
+[node name="texte 2" type="TextureRect" parent="CanvasLayer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -60.0
+margin_bottom = 10.0
+texture = ExtResource( 5 )
+
+[node name="texte 3" type="TextureRect" parent="CanvasLayer/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -60.0
+margin_bottom = 10.0
+texture = ExtResource( 6 )
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control"]
+editor/display_folded = true
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 200.0
+margin_top = 596.0
+margin_right = -200.0
+margin_bottom = -30.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Control/Panel"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+
+[node name="Lautrec" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1042.99, 415.39 )
+collision_layer = 3
+forceSaut = 400
+
+[node name="ilot depart" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 1055.14, 4.58743 )
+
+[node name="zoneCamera" parent="ilot depart" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -12.39, 238.404 )
+z_index = -200
+
+[node name="targetZone" type="Node2D" parent="ilot depart/zoneCamera"]
+position = Vector2( 3.41614, -155.337 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot depart/zoneCamera"]
+position = Vector2( -0.0045166, -0.000152588 )
+polygon = PoolVector2Array( -293.72, -838.116, 526.5, -800.719, 845.614, -484.099, 970.267, 29.4733, 798.245, 440.83, 137.581, 488.198, -346.075, 465.761, -809.786, 361.052, -944.412, -197.396, -734.994, -558.892 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot depart"]
+visible = false
+position = Vector2( 945.305, 381.403 )
+polygon = PoolVector2Array( -1373.04, -21.4731, -1510.57, 93.7987, -1623.64, 208.085, -416.984, 195.84, -393.387, 162.897, -571.963, -35.0771 )
+
+[node name="decor" type="Node2D" parent="ilot depart"]
+editor/display_folded = true
+
+[node name="chapeaux" type="Node2D" parent="ilot depart/decor"]
+editor/display_folded = true
+position = Vector2( 9.66577, 228.757 )
+z_index = 100
+script = ExtResource( 9 )
+
+[node name="hommedroitestatic" type="AnimatedSprite" parent="ilot depart/decor/chapeaux"]
+position = Vector2( 541.641, 1.81945 )
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="hommegauchestatic" type="AnimatedSprite" parent="ilot depart/decor/chapeaux"]
+position = Vector2( -603.683, -2.32912 )
+frames = SubResource( 2 )
+animation = "idle"
+
+[node name="objInteractif3" parent="ilot depart/decor/chapeaux" instance=ExtResource( 20 )]
+editor/display_folded = true
+position = Vector2( 509.065, 293.196 )
+interaction = "chapeaux"
+
+[node name="zone affiche logo" type="CollisionPolygon2D" parent="ilot depart/decor/chapeaux/objInteractif3"]
+position = Vector2( -65.4536, 3.02118 )
+polygon = PoolVector2Array( -220.765, 69.1259, -98.1626, 99.0101, 18.3093, 92.1138, 92.6368, 95.1788, 95.7018, 63.762, 97.2343, 30.8127, 46.661, -38.9171, -72.8759, -68.0351, -177.854, -38.1509, -218.466, 13.955 )
+
+[node name="zone affiche logo2" type="CollisionPolygon2D" parent="ilot depart/decor/chapeaux/objInteractif3"]
+position = Vector2( -941.938, -5.55811 )
+polygon = PoolVector2Array( -100.589, 92.12, -31.6259, 85.2236, 29.6848, 87.2022, 55.728, 70.6647, 64.9232, 49.2093, 65.6895, -0.597778, 15.1161, -24.3519, -82.1992, -51.1711, -141.201, -31.2483, -181.813, -11.3254, -195, 22.1617, -191.008, 63.7683, -176.449, 85.9899 )
+
+[node name="zoneInteraction" type="Area2D" parent="ilot depart/decor/chapeaux/objInteractif3"]
+editor/display_folded = true
+position = Vector2( -123.342, -5.24866 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot depart/decor/chapeaux/objInteractif3/zoneInteraction"]
+position = Vector2( 2.37352, -3.30792 )
+scale = Vector2( 1.01021, 1 )
+polygon = PoolVector2Array( -82.8484, 35.9583, -81.8337, 82.9186, -9.77454, 83.6848, 74.7521, 83.9098, 63.2914, 29.3292, 23.9976, 9.48169, -22.6693, 7.82489, -62.8707, 12.4225 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ilot depart/decor/chapeaux/objInteractif3/zoneInteraction"]
+position = Vector2( -819.53, -0.309448 )
+scale = Vector2( 1.01021, 1 )
+polygon = PoolVector2Array( -141.883, 31.5853, -147.193, 76.7947, -91.0628, 79.0935, -35.6909, 75.2622, -34.1739, 47.6768, -42.5176, 29.2865, -67.5487, 17.7925, -105.475, 25.4552 )
+
+[node name="feedback" parent="ilot depart/decor/chapeaux/objInteractif3" instance=ExtResource( 21 )]
+editor/display_folded = true
+position = Vector2( -135.918, -66.3312 )
+
+[node name="feedback2" parent="ilot depart/decor/chapeaux/objInteractif3/feedback" instance=ExtResource( 21 )]
+position = Vector2( -865.02, -1.65393 )
+
+[node name="1plan" type="Sprite" parent="ilot depart/decor"]
+visible = false
+z_index = 100
+texture = ExtResource( 22 )
+
+[node name="2plan" type="Sprite" parent="ilot depart/decor"]
+visible = false
+z_index = -100
+texture = ExtResource( 23 )
+
+[node name="2plan2" type="Sprite" parent="ilot depart/decor"]
+position = Vector2( -17.058, 162.879 )
+z_index = -90
+texture = SubResource( 3 )
+
+[node name="rideaux" type="AnimatedSprite" parent="ilot depart/decor"]
+z_index = -120
+frames = SubResource( 4 )
+animation = "ferme"
+
+[node name="4plan" type="Sprite" parent="ilot depart/decor"]
+z_index = -150
+texture = ExtResource( 26 )
+
+[node name="5plan" type="AnimatedSprite" parent="ilot depart/decor"]
+editor/display_folded = true
+z_index = -160
+frames = SubResource( 5 )
+animation = "interaction"
+frame = 12
+playing = true
+script = ExtResource( 34 )
+
+[node name="capte leotard" parent="ilot depart/decor/5plan" instance=ExtResource( 35 )]
+editor/display_folded = true
+position = Vector2( 415.348, -383.703 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot depart/decor/5plan/capte leotard"]
+polygon = PoolVector2Array( -97.212, 18.6545, -114.496, 35.9384, -54.7881, 87.7899, -29.6479, 72.0773, 31.6312, 62.6498, 89.7678, 10.7982, 102.338, -22.1982, 64.6277, -69.336, 1.77722, -77.1923, -62.6444, -47.3384, -76.7858, -15.9132 )
+
+[node name="dernierplan" type="Sprite" parent="ilot depart/decor"]
+z_index = -200
+texture = ExtResource( 36 )
+
+[node name="bas" type="Sprite" parent="ilot depart/decor"]
+position = Vector2( -37.0913, 692.626 )
+scale = Vector2( 1.31579, 1.17855 )
+z_index = -130
+texture = ExtResource( 37 )
+
+[node name="objets" type="Node2D" parent="ilot depart"]
+editor/display_folded = true
+
+[node name="table" type="Node2D" parent="ilot depart/objets"]
+editor/display_folded = true
+position = Vector2( 52.6613, 380.246 )
+script = ExtResource( 38 )
+
+[node name="lautrecAssis" type="Sprite" parent="ilot depart/objets/table"]
+texture = ExtResource( 39 )
+
+[node name="table sans lautrec" type="Node2D" parent="ilot depart/objets/table"]
+editor/display_folded = true
+position = Vector2( 0.510254, 0.180542 )
+z_index = -10
+
+[node name="table" type="Sprite" parent="ilot depart/objets/table/table sans lautrec"]
+position = Vector2( -0.820801, -8.66431 )
+scale = Vector2( 0.236, 0.236 )
+texture = ExtResource( 40 )
+
+[node name="chaiselautrec" type="Sprite" parent="ilot depart/objets/table/table sans lautrec"]
+texture = ExtResource( 41 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ilot depart/objets/table"]
+position = Vector2( -17.1047, 6.51608 )
+stream = ExtResource( 42 )
+volume_db = -20.194
+bus = "bruits"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ilot depart/objets/table"]
+anims/animTexte1 = SubResource( 6 )
+
+[node name="objInteractif" parent="ilot depart/objets/table" instance=ExtResource( 20 )]
+position = Vector2( -17.1047, 6.51608 )
+interaction = "table"
+
+[node name="zone affiche logo" type="CollisionPolygon2D" parent="ilot depart/objets/table/objInteractif"]
+polygon = PoolVector2Array( -129.628, 76.291, -11.4071, 120.035, 165.5, 109.868, 182.784, -5.01971, 166.517, -54.3301, 102.464, -97.5402, -55.1255, -97.0318, -117.77, -51.0307, -150.849, -3.59711 )
+
+[node name="zoneInteraction" type="Area2D" parent="ilot depart/objets/table/objInteractif"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot depart/objets/table/objInteractif/zoneInteraction"]
+position = Vector2( -0.934341, 0 )
+scale = Vector2( 1.01021, 1 )
+polygon = PoolVector2Array( -60.1853, -7.56149, -51.6306, 36.157, -15.399, 64.6248, 66.1221, 67.6749, 83.7346, 21.4147, 81.2185, -36.5377, 53.5416, -53.8217, -17.4119, -55.8551 )
+
+[node name="feedback" parent="ilot depart/objets/table/objInteractif" instance=ExtResource( 21 )]
+position = Vector2( 21.2486, -91.2464 )
+
+[node name="gramaphone" type="Node2D" parent="ilot depart/objets"]
+editor/display_folded = true
+position = Vector2( -315.182, 364.519 )
+script = ExtResource( 43 )
+
+[node name="objInteractif2" parent="ilot depart/objets/gramaphone" instance=ExtResource( 20 )]
+editor/display_folded = true
+position = Vector2( 0, 0 )
+interaction = "gramaphone"
+
+[node name="zone affiche logo" type="CollisionPolygon2D" parent="ilot depart/objets/gramaphone/objInteractif2"]
+polygon = PoolVector2Array( -129.628, 76.291, -11.4071, 120.035, 165.5, 109.868, 182.784, -5.01971, 166.517, -54.3301, 102.464, -97.5402, -55.1255, -97.0318, -117.77, -51.0307, -150.849, -3.59711 )
+
+[node name="zoneInteraction" type="Area2D" parent="ilot depart/objets/gramaphone/objInteractif2"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot depart/objets/gramaphone/objInteractif2/zoneInteraction"]
+position = Vector2( -0.934341, 0 )
+scale = Vector2( 1.01021, 1 )
+polygon = PoolVector2Array( -60.1853, -7.56149, -51.6306, 36.157, -15.399, 64.6248, 66.1221, 67.6749, 83.7346, 21.4147, 81.2185, -36.5377, 53.5416, -53.8217, -17.4119, -55.8551 )
+
+[node name="feedback" parent="ilot depart/objets/gramaphone/objInteractif2" instance=ExtResource( 21 )]
+position = Vector2( 20.3994, -110.774 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="ilot depart/objets/gramaphone/objInteractif2"]
+stream = ExtResource( 42 )
+bus = "bruits"
+
+[node name="gramophone1" type="AnimatedSprite" parent="ilot depart/objets/gramaphone"]
+position = Vector2( 14.0627, -26.9636 )
+z_index = -5
+frames = SubResource( 7 )
+animation = "eteint"
+playing = true
+
+[node name="table2" type="Sprite" parent="ilot depart/objets"]
+position = Vector2( -412.177, 448.423 )
+scale = Vector2( 0.236, 0.236 )
+z_index = -50
+texture = ExtResource( 40 )
+
+[node name="corde" type="Node2D" parent="ilot depart/objets"]
+editor/display_folded = true
+position = Vector2( 262.774, 69.5816 )
+script = ExtResource( 46 )
+
+[node name="cordeSprite" type="Sprite" parent="ilot depart/objets/corde"]
+position = Vector2( 0, 6.2 )
+scale = Vector2( 0.77, 0.77 )
+texture = ExtResource( 47 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ilot depart/objets/corde"]
+autoplay = "idle"
+anims/bouge = SubResource( 8 )
+anims/idle = SubResource( 9 )
+
+[node name="objInteractif" parent="ilot depart/objets/corde" instance=ExtResource( 20 )]
+editor/display_folded = true
+position = Vector2( 0, 208.424 )
+
+[node name="zone affiche logo" type="CollisionPolygon2D" parent="ilot depart/objets/corde/objInteractif"]
+polygon = PoolVector2Array( -78.1086, 8.25168, -104.919, 35.1182, -116.469, 91.7142, -96.7877, 136.458, -57.5171, 156.674, 12.7393, 155.137, 50.9463, 155.986, 82.3611, 157.684, 119.719, 130.514, 127.361, 90.6092, 123.964, 47.3078, 89.1534, 6.55359, 57.7388, -3.63495, 6.7959, -7.88019, -43.7704, -1.84247 )
+
+[node name="zoneInteraction" type="Area2D" parent="ilot depart/objets/corde/objInteractif"]
+editor/display_folded = true
+position = Vector2( -227.218, 108.757 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot depart/objets/corde/objInteractif/zoneInteraction"]
+position = Vector2( 218.433, -45.2662 )
+scale = Vector2( 1.01021, 1 )
+polygon = PoolVector2Array( -60.1853, -7.56149, -51.6306, 36.157, -15.399, 64.6248, 66.1221, 67.6749, 83.7346, 21.4147, 81.2185, -36.5377, 53.5416, -53.8217, -17.4119, -55.8551 )
+
+[node name="feedback" parent="ilot depart/objets/corde/objInteractif" instance=ExtResource( 21 )]
+position = Vector2( -47.0072, -43.0281 )
+
+[node name="zoneColl" parent="ilot depart" instance=ExtResource( 48 )]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ilot depart/zoneColl"]
+position = Vector2( 0, -3.05176e-005 )
+polygon = PoolVector2Array( 329.407, 32.7626, -403.726, 44.9207, -400.078, 1.15161, -300.382, -0.064209, 391.413, -6.14325, 397.492, 35.1943 )
+
+[node name="ilot cirque" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( -1325.42, 19.0781 )
+z_index = -50
+
+[node name="zoneCamera" parent="ilot cirque" instance=ExtResource( 8 )]
+editor/display_folded = true
+position = Vector2( -219.697, -24.9522 )
+scale = Vector2( 1.8, 1.8 )
+z_index = -200
+
+[node name="targetZone" type="Node2D" parent="ilot cirque/zoneCamera"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot cirque/zoneCamera"]
+polygon = PoolVector2Array( -62.5402, -316.368, -208.276, -263.163, -344.759, -103.547, -360.952, 111.587, -259.168, 250.383, -67.1667, 310.528, 141.028, 303.589, 337.656, 229.564, 395.487, 67.6349, 383.921, -94.294, 259.004, -256.223, 69.3162, -314.055 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot cirque"]
+editor/display_folded = true
+position = Vector2( -303.928, 259.961 )
+polygon = PoolVector2Array( -182.217, -33.8016, -205.868, -11.4645, -224.264, 12.1866, -210.467, 43.7214, -173.676, 60.8028, -86.9557, 83.7969, -5.26721, 86.6053, 193.096, 87.7427, 383.124, 46.3087, 395.984, -0.846985, 377.071, -32.749, 336.317, -60.7675, 231.456, -87.1192, 150.212, -96.2142, 50.6094, -99.0058, -70.8041, -83.723, -146.789, -55.6579 )
+
+[node name="vivid-colors-fragment-arena-circus-kyiv-171667" type="Sprite" parent="ilot cirque/CollisionPolygon2D"]
+position = Vector2( 98.9849, 13.2558 )
+scale = Vector2( 1.51963, 1.35118 )
+
+[node name="zoneCollFond" parent="ilot cirque" instance=ExtResource( 48 )]
+editor/display_folded = true
+position = Vector2( -207.727, 123.179 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot cirque/zoneCollFond"]
+polygon = PoolVector2Array( 280.083, 88.2536, 255.767, 67.7768, 185.378, 44.7404, 102.191, 33.2222, 31.8021, 24.2636, -53.9443, 21.704, -139.691, 34.502, -213.919, 53.699, -263.436, 79.971, -287.896, 95.0233, -270.021, 60.2148, -116.655, -14.1304, 63.7971, -7.73135, 219.933, 5.06662, 271.125, 40.901 )
+
+[node name="decor ilot 2" type="Node2D" parent="ilot cirque"]
+editor/display_folded = true
+position = Vector2( 0, 19 )
+
+[node name="fond cirque" type="Sprite" parent="ilot cirque/decor ilot 2"]
+position = Vector2( -202.963, -11.5722 )
+scale = Vector2( 0.690008, 0.690008 )
+z_index = -100
+texture = ExtResource( 49 )
+
+[node name="chapiteau-3" type="Sprite" parent="ilot cirque/decor ilot 2"]
+position = Vector2( -199.956, -412.915 )
+scale = Vector2( 2.67249, 2.67249 )
+texture = ExtResource( 50 )
+
+[node name="chevalet" type="Sprite" parent="ilot cirque/decor ilot 2"]
+position = Vector2( -33.2667, 112.733 )
+scale = Vector2( 1.54113, 1.34696 )
+z_index = 3
+texture = ExtResource( 51 )
+
+[node name="sol cirque" type="Sprite" parent="ilot cirque/decor ilot 2"]
+position = Vector2( -204.856, 240.903 )
+scale = Vector2( 1.4254, 1.21071 )
+z_index = 2
+texture = ExtResource( 52 )
+
+[node name="Henri_de_Toulouse-Lautrec_-_At_the_Circus_-_Free_Horses_-_Walters_372523" type="Sprite" parent="ilot cirque/decor ilot 2/sol cirque"]
+position = Vector2( -103.721, -80.7239 )
+scale = Vector2( 0.647035, 0.681733 )
+z_index = 2
+texture = ExtResource( 53 )
+
+[node name="foule" type="Sprite" parent="ilot cirque/decor ilot 2/sol cirque"]
+position = Vector2( -0.130615, 29.5411 )
+scale = Vector2( 0.427598, 0.596943 )
+z_index = 100
+texture = ExtResource( 54 )
+
+[node name="tache droite" type="Sprite" parent="ilot cirque/decor ilot 2"]
+position = Vector2( 169.332, 9.05658 )
+scale = Vector2( 1.52049, 1.96389 )
+texture = ExtResource( 55 )
+
+[node name="tache gauche" type="Sprite" parent="ilot cirque/decor ilot 2"]
+position = Vector2( -572.766, 9.05658 )
+scale = Vector2( 1.52049, 1.96389 )
+texture = ExtResource( 56 )
+
+[node name="ailecirque" type="Sprite" parent="ilot cirque/decor ilot 2"]
+position = Vector2( -199.228, 419.987 )
+scale = Vector2( 0.799543, 0.799543 )
+z_index = -130
+texture = ExtResource( 37 )
+
+[node name="ilot cabaret" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( -306.203, -1188.82 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -50
+
+[node name="cancandroit" type="Sprite" parent="ilot cabaret"]
+position = Vector2( -275.239, -49.7501 )
+texture = ExtResource( 57 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot cabaret"]
+position = Vector2( -402.509, -2.77588 )
+polygon = PoolVector2Array( -47.0831, 87.7495, 6.85443, 89.0039, 9.99036, 55.1362, 27.5514, 52.6274, 38.2134, 87.7495, 70.1996, 87.1223, 97.1684, 77.7146, 95.2869, 56.3904, 123.51, 57.6448, 141.071, 78.969, 174.939, 78.3418, 186.855, 95.2757, 387.287, 90.5274, 385.459, 75.2875, 260.492, -33.8296, 233.267, -35.1778, 206.925, -56.502, 169.921, -54.6204, 150.479, -41.4496, 126.646, -37.6865, 94.6597, -37.6865, 39.4678, -27.0245, -28.2676, -0.682922 )
+
+[node name="zoneCollFond" parent="ilot cabaret" instance=ExtResource( 48 )]
+editor/display_folded = true
+position = Vector2( -311.081, -65.2267 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot cabaret/zoneCollFond"]
+polygon = PoolVector2Array( -122.204, 54.869, -53.8413, 29.1545, -0.531006, 19.1198, 53.4065, 15.3566, 73.4763, 0.931519, 116.752, -0.322876, 102.954, -14.748, 41.4901, -16.0024, -100.88, 22.2556, -126.594, 38.5623 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ilot cabaret/zoneCollFond"]
+position = Vector2( 150.882, 14.3698 )
+polygon = PoolVector2Array( 17.2882, 7.42505, -3.37503, 7.98444, 1.86972, 1.63556, 14.0154, 1.91162 )
+
+[node name="cancangauche" type="Sprite" parent="ilot cabaret"]
+position = Vector2( 294.372, -48.2672 )
+texture = ExtResource( 58 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ilot cabaret"]
+position = Vector2( 273.078, 8.80902 )
+polygon = PoolVector2Array( -235.856, 66.9288, -109.54, -45.1764, -81.119, -43.5974, -55.8558, -65.7028, 62.5652, -62.5449, 102.039, -45.1764, 122.565, -23.0712, 180.986, 6.92877, 193.618, 77.9814, 138.355, 79.5604, 138.355, 47.9814, 120.986, 52.7183, 109.934, 76.4025, 51.5126, 70.0867, 35.7231, 49.5604, 5.72308, 65.3499, -40.0663, 82.7183, -239.014, 82.7183 )
+
+[node name="zoneCollFond2" parent="ilot cabaret" instance=ExtResource( 48 )]
+editor/display_folded = true
+position = Vector2( 343.669, -72.9485 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot cabaret/zoneCollFond2"]
+polygon = PoolVector2Array( 110.217, 79.5648, 54.8929, 50.9321, 38.878, 34.4319, -3.82845, 12.1082, -127.58, 10.6522, -125.154, -2.45087, -5.76965, -5.84802, 50.5252, 18.9023, 78.6726, 48.0203, 97.114, 58.2117 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ilot cabaret/zoneCollFond2"]
+position = Vector2( -161.605, 26.2062 )
+polygon = PoolVector2Array( -17.4169, 3.37274, 4.90696, 3.85809, 5.39225, -4.87732, -15.4757, -4.87732 )
+
+[node name="ilot hp" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( -409.346, 1328.62 )
+z_index = -50
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ilot hp"]
+position = Vector2( -118.491, 60.6208 )
+polygon = PoolVector2Array( -245.953, -119.727, -243.42, 139.617, -246.209, 482.727, 700.53, 493.823, 700.53, -118.345 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="ilot hp"]
+position = Vector2( -362.636, -64.1587 )
+color = Color( 0.937255, 0.909804, 0.909804, 1 )
+polygon = PoolVector2Array( -4.85289, -0.606323, 944.675, 3.21277, 935.009, 628.268, -2.06346, 604.717 )
+
+[node name="Cirque1" type="Sprite" parent="ilot hp"]
+self_modulate = Color( 1, 1, 1, 0.905882 )
+position = Vector2( -311.933, 50.4 )
+rotation = -0.360899
+scale = Vector2( 0.56784, 0.56784 )
+z_index = -50
+texture = ExtResource( 59 )
+
+[node name="zoneCollFond" parent="ilot hp" instance=ExtResource( 48 )]
+editor/display_folded = true
+position = Vector2( 75.5418, -104.755 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot hp/zoneCollFond"]
+polygon = PoolVector2Array( -439.173, 28.9639, -439.173, -27.6167, 501.142, -18.1866, 502.49, 28.9639 )
+
+[node name="fond et bounds" type="Node2D" parent="."]
+editor/display_folded = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="bordsTeleportent" type="Node2D" parent="fond et bounds"]
+editor/display_folded = true
+
+[node name="haut" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 60 )]
+editor/display_folded = true
+position = Vector2( 38.6101, -2001.18 )
+
+[node name="zonePop" type="Node2D" parent="fond et bounds/bordsTeleportent/haut"]
+position = Vector2( -27.3943, 4217.22 )
+
+[node name="bas" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 60 )]
+editor/display_folded = true
+position = Vector2( 20.4951, 2504.48 )
+
+[node name="zonePop" type="Node2D" parent="fond et bounds/bordsTeleportent/bas"]
+position = Vector2( -0.525635, -4085.3 )
+
+[node name="gauche" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 60 )]
+editor/display_folded = true
+position = Vector2( -2558.81, 221.235 )
+rotation = 1.5708
+horizontal = false
+
+[node name="zonePop" type="Node2D" parent="fond et bounds/bordsTeleportent/gauche"]
+position = Vector2( -209.375, -4794.11 )
+
+[node name="droite" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 60 )]
+editor/display_folded = true
+position = Vector2( 2624.39, 350.78 )
+rotation = 1.5708
+horizontal = false
+
+[node name="zonePop" type="Node2D" parent="fond et bounds/bordsTeleportent/droite"]
+position = Vector2( -359.504, 4922.08 )
+
+[node name="fond déco" type="Node2D" parent="fond et bounds"]
+editor/display_folded = true
+position = Vector2( 1093.99, 427.107 )
+rotation = 0.481195
+z_index = -450
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="dernierplan2" type="Sprite" parent="fond et bounds/fond déco"]
+self_modulate = Color( 1, 1, 1, 0.129412 )
+position = Vector2( -1437.39, 2121.38 )
+rotation = -0.756591
+texture = ExtResource( 61 )
+offset = Vector2( 0.000244141, -954.937 )
+
+[node name="dernierplan7" type="Sprite" parent="fond et bounds/fond déco"]
+self_modulate = Color( 1, 1, 1, 0.129412 )
+position = Vector2( -1026.02, 1674.71 )
+rotation = -0.756591
+scale = Vector2( -0.574561, 1.17584 )
+texture = ExtResource( 61 )
+offset = Vector2( 0.000244141, -954.937 )
+
+[node name="dernierplan5" type="Sprite" parent="fond et bounds/fond déco"]
+self_modulate = Color( 1, 1, 1, 0.129412 )
+position = Vector2( 422.421, 1001.67 )
+rotation = -2.68283
+texture = ExtResource( 61 )
+offset = Vector2( 0.000244141, -954.937 )
+
+[node name="dernierplan6" type="Sprite" parent="fond et bounds/fond déco"]
+self_modulate = Color( 1, 1, 1, 0.129412 )
+position = Vector2( 204.135, -428.652 )
+rotation = -2.68283
+texture = ExtResource( 61 )
+offset = Vector2( 0.000244141, -954.937 )
+
+[node name="dernierplan4" type="Sprite" parent="fond et bounds/fond déco"]
+self_modulate = Color( 1, 1, 1, 0.129412 )
+position = Vector2( -2571.56, 272.984 )
+rotation = -0.756591
+texture = ExtResource( 61 )
+
+[node name="queen moyen" type="Sprite" parent="fond et bounds/fond déco"]
+self_modulate = Color( 1, 1, 1, 0.345098 )
+position = Vector2( -2012.29, 60.4302 )
+texture = ExtResource( 62 )
+
+[node name="Cancan(1)" type="Sprite" parent="fond et bounds/fond déco"]
+self_modulate = Color( 1, 1, 1, 0.709804 )
+position = Vector2( 1044.76, 842.329 )
+rotation = -0.191668
+scale = Vector2( 3.42606, 4.15117 )
+texture = ExtResource( 63 )
+
+[node name="queen moyen2" type="Sprite" parent="fond et bounds/fond déco"]
+self_modulate = Color( 1, 1, 1, 0.345098 )
+position = Vector2( -2161.62, 2508.36 )
+rotation = -0.838785
+scale = Vector2( 0.648039, 0.648039 )
+texture = ExtResource( 62 )
+
+[node name="dernierplan3" type="Sprite" parent="fond et bounds/fond déco"]
+self_modulate = Color( 1, 1, 1, 0.227451 )
+texture = ExtResource( 61 )
+
+[node name="Cirque2" type="Sprite" parent="fond et bounds/fond déco"]
+self_modulate = Color( 1, 1, 1, 0.352941 )
+position = Vector2( -1479.62, 1817.72 )
+rotation = -0.0856285
+scale = Vector2( 0.236365, 0.236365 )
+texture = ExtResource( 64 )
+
+[node name="Cirque4" type="Sprite" parent="fond et bounds/fond déco"]
+self_modulate = Color( 1, 1, 1, 0.164706 )
+position = Vector2( -1562.48, 1483.99 )
+rotation = -0.885835
+scale = Vector2( 0.174172, 0.174172 )
+texture = ExtResource( 65 )
+offset = Vector2( -672.091, -0.000732422 )
+
+[node name="Cirque5" type="Sprite" parent="fond et bounds/fond déco"]
+self_modulate = Color( 1, 1, 1, 0.164706 )
+position = Vector2( -1562.48, 1483.99 )
+rotation = -0.242204
+scale = Vector2( 0.174172, 0.174172 )
+texture = ExtResource( 65 )
+offset = Vector2( -672.091, -0.000732422 )
+
+[node name="fond" type="Sprite" parent="fond et bounds"]
+self_modulate = Color( 0.964706, 0.964706, 0.964706, 1 )
+position = Vector2( 19.2443, 716.835 )
+scale = Vector2( 4.71329, 5.24046 )
+z_index = -500
+z_as_relative = false
+texture = ExtResource( 66 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fond3" type="Sprite" parent="fond et bounds"]
+self_modulate = Color( 0.964706, 0.964706, 0.964706, 1 )
+position = Vector2( 32.1139, 4222.83 )
+scale = Vector2( 4.713, -5.24 )
+z_index = -500
+z_as_relative = false
+texture = ExtResource( 66 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="fond2" type="Sprite" parent="fond et bounds"]
+self_modulate = Color( 0.964706, 0.964706, 0.964706, 1 )
+position = Vector2( 0.86784, -2810.51 )
+scale = Vector2( 4.713, -5.24 )
+z_index = -500
+z_as_relative = false
+texture = ExtResource( 66 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="2planbis" type="Sprite" parent="fond et bounds"]
+visible = false
+position = Vector2( 1049.32, 164.268 )
+z_index = -90
+texture = ExtResource( 67 )
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="body_entered" from="ilot depart" to="Lautrec" method="_on_ilot_body_entered"]
+[connection signal="body_exited" from="ilot depart" to="Lautrec" method="_on_ilot_body_exited"]
+[connection signal="animation_finished" from="ilot depart/decor/5plan" to="ilot depart/decor/5plan" method="next_anim"]
+[connection signal="body_entered" from="ilot cirque" to="Lautrec" method="_on_ilot_body_entered"]
+[connection signal="body_exited" from="ilot cirque" to="Lautrec" method="_on_ilot_body_exited"]
+[connection signal="body_entered" from="ilot cabaret" to="Lautrec" method="_on_ilot_body_entered"]
+[connection signal="body_exited" from="ilot cabaret" to="Lautrec" method="_on_ilot_body_exited"]
+[connection signal="body_entered" from="ilot hp" to="Lautrec" method="_on_ilot_body_entered"]
+[connection signal="body_exited" from="ilot hp" to="Lautrec" method="_on_ilot_body_exited"]
