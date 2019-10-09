@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fondationzone.png-3865dc164c57eac08feec0ad10892d6e.stex"
+path="res://.import/ailesilot1gauche.png-2c180ba4713e399a2813a53da6932f86.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/decor/fondationzone.png"
-dest_files=[ "res://.import/fondationzone.png-3865dc164c57eac08feec0ad10892d6e.stex" ]
+source_file="res://sprites/decor/ailesilot1gauche.png"
+dest_files=[ "res://.import/ailesilot1gauche.png-2c180ba4713e399a2813a53da6932f86.stex" ]
 
 [params]
 
