@@ -855,6 +855,7 @@ texture = ExtResource( 54 )
 [node name="chapiteau-3" type="Sprite" parent="ilot cirque/decor ilot 2"]
 position = Vector2( -191.916, -551.339 )
 scale = Vector2( 3.31483, 3.31483 )
+z_index = 50
 texture = ExtResource( 55 )
 
 [node name="Henri_de_Toulouse-Lautrec_-_At_the_Circus_-_Free_Horses_-_Walters_372523" type="Sprite" parent="ilot cirque/decor ilot 2"]
@@ -911,12 +912,12 @@ z_index = -1
 texture = ExtResource( 63 )
 
 [node name="affiche" type="AnimatedSprite" parent="ilot cirque/decor ilot 2"]
-position = Vector2( -201.983, -155.958 )
+position = Vector2( -199.333, -158.608 )
 scale = Vector2( 1.2261, 1.2261 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "affiche"
-frame = 3
+frame = 1
 playing = true
 
 [node name="fondcirque" type="Sprite" parent="ilot cirque/decor ilot 2"]
@@ -1180,7 +1181,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -418.972, 391.548 )
 frames = SubResource( 16 )
-frame = 4
+frame = 2
 playing = true
 [connection signal="body_entered" from="ilot depart" to="Lautrec" method="_on_ilot_body_entered"]
 [connection signal="body_exited" from="ilot depart" to="Lautrec" method="_on_ilot_body_exited"]
