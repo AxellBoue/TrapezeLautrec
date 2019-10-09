@@ -825,7 +825,6 @@ position = Vector2( 0, -3.05176e-005 )
 polygon = PoolVector2Array( 329.407, 32.7626, -403.726, 44.9207, -400.078, 1.15161, -300.382, -0.064209, 391.413, -6.14325, 397.492, 35.1943 )
 
 [node name="ilot cirque" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( -1325.42, 19.0781 )
 z_index = -50
 
@@ -860,10 +859,10 @@ polygon = PoolVector2Array( 280.083, 88.2536, 255.767, 67.7768, 185.378, 44.7404
 [node name="decor ilot 2" type="Node2D" parent="ilot cirque"]
 position = Vector2( 0, 19 )
 
-[node name="Sprite" type="Sprite" parent="ilot cirque/decor ilot 2"]
-position = Vector2( 118.352, 214.34 )
-scale = Vector2( 1.87064, 1.87064 )
-z_index = 150
+[node name="violon" type="Sprite" parent="ilot cirque/decor ilot 2"]
+position = Vector2( 66.7207, 203.96 )
+scale = Vector2( 1.98695, 1.98695 )
+z_index = 190
 texture = ExtResource( 54 )
 
 [node name="fond cirque" type="Sprite" parent="ilot cirque/decor ilot 2"]
@@ -874,7 +873,7 @@ z_index = -100
 texture = ExtResource( 55 )
 
 [node name="chapiteau-3" type="Sprite" parent="ilot cirque/decor ilot 2"]
-position = Vector2( -191.916, -551.339 )
+position = Vector2( -193.916, -552.339 )
 scale = Vector2( 3.31483, 3.31483 )
 z_index = 50
 texture = ExtResource( 56 )
@@ -888,7 +887,7 @@ texture = ExtResource( 57 )
 [node name="foule" type="Sprite" parent="ilot cirque/decor ilot 2"]
 position = Vector2( -198.058, 292.73 )
 scale = Vector2( 0.625453, 0.781843 )
-z_index = 100
+z_index = 180
 texture = ExtResource( 58 )
 
 [node name="sol cirque" type="Sprite" parent="ilot cirque/decor ilot 2"]
@@ -920,16 +919,16 @@ autoplay = "danseuse"
 anims/danseuse = SubResource( 14 )
 
 [node name="danseuse" type="Sprite" parent="ilot cirque/decor ilot 2/danseuse"]
-position = Vector2( -1238.34, 193.365 )
-rotation = 0.21186
-scale = Vector2( 0.285, 0.299 )
-z_index = -20
+position = Vector2( -1841.26, 223.682 )
+rotation = 0.330792
+scale = Vector2( -0.34694, 0.34694 )
+z_index = 100
 texture = ExtResource( 63 )
 
 [node name="baton" type="Sprite" parent="ilot cirque/decor ilot 2/danseuse"]
-position = Vector2( -1242.99, 230.889 )
+position = Vector2( -1843.33, 260.854 )
 scale = Vector2( 0.237073, 0.237073 )
-z_index = -21
+z_index = 99
 texture = ExtResource( 64 )
 
 [node name="affiche" type="AnimatedSprite" parent="ilot cirque/decor ilot 2"]
@@ -938,7 +937,7 @@ scale = Vector2( 1.2261, 1.2261 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "affiche"
-frame = 9
+frame = 4
 playing = true
 
 [node name="fondcirque" type="Sprite" parent="ilot cirque/decor ilot 2"]
@@ -1026,6 +1025,7 @@ position = Vector2( 75.5418, -104.755 )
 polygon = PoolVector2Array( -439.173, 28.9639, -439.173, -27.6167, 501.142, -18.1866, 502.49, 28.9639 )
 
 [node name="fond et bounds" type="Node2D" parent="."]
+editor/display_folded = true
 __meta__ = {
 "_edit_group_": true
 }
@@ -1185,7 +1185,7 @@ texture = ExtResource( 88 )
 position = Vector2( -418.972, 391.548 )
 z_index = -100
 frames = SubResource( 16 )
-frame = 4
+frame = 3
 playing = true
 [connection signal="body_entered" from="ilot depart" to="Lautrec" method="_on_ilot_body_entered"]
 [connection signal="body_exited" from="ilot depart" to="Lautrec" method="_on_ilot_body_exited"]
