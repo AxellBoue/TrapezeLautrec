@@ -10,22 +10,22 @@
 [ext_resource path="res://objets/ilots/ilot hp.tscn" type="PackedScene" id=8]
 [ext_resource path="res://objets/ilots/photographe.tscn" type="PackedScene" id=9]
 [ext_resource path="res://objets/zoneLoop.tscn" type="PackedScene" id=10]
-[ext_resource path="res://sprites/decor/ilot1 vieux/dernierplan.png" type="Texture" id=11]
-[ext_resource path="res://sprites/lautrec interactions/queen moyen.jpg" type="Texture" id=12]
-[ext_resource path="res://sprites/decor/ilot cancan/Cancan(1).png" type="Texture" id=13]
-[ext_resource path="res://sprites/decor/dessins cirque/Cirque2.jpg" type="Texture" id=14]
-[ext_resource path="res://sprites/decor/dessins cirque/Cirque4.jpg" type="Texture" id=15]
-[ext_resource path="res://sprites/decor/fond.jpg" type="Texture" id=16]
-[ext_resource path="res://sprites/decor/ilot1 vieux/2planbis.png" type="Texture" id=17]
-[ext_resource path="res://sprites/decor/animqueen/animfreddie0.png" type="Texture" id=18]
-[ext_resource path="res://sprites/decor/animqueen/animfreddie1.png" type="Texture" id=19]
-[ext_resource path="res://sprites/decor/animqueen/animfreddie2.png" type="Texture" id=20]
-[ext_resource path="res://sprites/decor/animqueen/animfreddie3.png" type="Texture" id=21]
-[ext_resource path="res://sprites/decor/animqueen/animfreddie4.png" type="Texture" id=22]
+[ext_resource path="res://sprites/decor/ilot cancan/Cancan(1).png" type="Texture" id=11]
+[ext_resource path="res://sprites/decor/ilot1 vieux/dernierplan.png" type="Texture" id=12]
+[ext_resource path="res://sprites/decor/dessins cirque/Cirque2.jpg" type="Texture" id=13]
+[ext_resource path="res://sprites/decor/dessins cirque/Cirque4.jpg" type="Texture" id=14]
+[ext_resource path="res://sprites/decor/fond.jpg" type="Texture" id=15]
+[ext_resource path="res://sprites/decor/ilot1 vieux/2planbis.png" type="Texture" id=16]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie0.png" type="Texture" id=17]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie1.png" type="Texture" id=18]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie2.png" type="Texture" id=19]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie3.png" type="Texture" id=20]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie4.png" type="Texture" id=21]
+[ext_resource path="res://sprites/decor/fond transparence.png" type="Texture" id=22]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": false,
 "name": "default",
 "speed": 5.0
@@ -62,7 +62,6 @@ forceSaut = 400
 position = Vector2( 1621.8, -1326.93 )
 
 [node name="fond et bounds" type="Node2D" parent="."]
-editor/display_folded = true
 __meta__ = {
 "_edit_group_": true
 }
@@ -103,82 +102,34 @@ horizontal = false
 position = Vector2( -359.504, 4922.08 )
 
 [node name="fond déco" type="Node2D" parent="fond et bounds"]
-editor/display_folded = true
 position = Vector2( 1093.99, 427.107 )
 rotation = 0.481195
 z_index = -450
-
-[node name="dernierplan2" type="Sprite" parent="fond et bounds/fond déco"]
-self_modulate = Color( 1, 1, 1, 0.129412 )
-position = Vector2( -1437.39, 2121.38 )
-rotation = -0.756591
-texture = ExtResource( 11 )
-offset = Vector2( 0.000244141, -954.937 )
-
-[node name="dernierplan7" type="Sprite" parent="fond et bounds/fond déco"]
-self_modulate = Color( 1, 1, 1, 0.129412 )
-position = Vector2( -1026.02, 1674.71 )
-rotation = -0.756591
-scale = Vector2( -0.574561, 1.17584 )
-texture = ExtResource( 11 )
-offset = Vector2( 0.000244141, -954.937 )
-
-[node name="dernierplan5" type="Sprite" parent="fond et bounds/fond déco"]
-self_modulate = Color( 1, 1, 1, 0.129412 )
-position = Vector2( 422.421, 1001.67 )
-rotation = -2.68283
-texture = ExtResource( 11 )
-offset = Vector2( 0.000244141, -954.937 )
-
-[node name="dernierplan6" type="Sprite" parent="fond et bounds/fond déco"]
-self_modulate = Color( 1, 1, 1, 0.129412 )
-position = Vector2( 204.135, -428.652 )
-rotation = -2.68283
-texture = ExtResource( 11 )
-offset = Vector2( 0.000244141, -954.937 )
-
-[node name="dernierplan4" type="Sprite" parent="fond et bounds/fond déco"]
-self_modulate = Color( 1, 1, 1, 0.129412 )
-position = Vector2( -2571.56, 272.984 )
-rotation = -0.756591
-texture = ExtResource( 11 )
-
-[node name="queen moyen" type="Sprite" parent="fond et bounds/fond déco"]
-self_modulate = Color( 1, 1, 1, 0.345098 )
-position = Vector2( -2012.29, 60.4302 )
-texture = ExtResource( 12 )
 
 [node name="Cancan(1)" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.709804 )
 position = Vector2( 1044.76, 842.329 )
 rotation = -0.191668
 scale = Vector2( 3.42606, 4.15117 )
-texture = ExtResource( 13 )
-
-[node name="queen moyen2" type="Sprite" parent="fond et bounds/fond déco"]
-self_modulate = Color( 1, 1, 1, 0.345098 )
-position = Vector2( -2161.62, 2508.36 )
-rotation = -0.838785
-scale = Vector2( 0.648039, 0.648039 )
-texture = ExtResource( 12 )
+texture = ExtResource( 11 )
 
 [node name="dernierplan3" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.227451 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Cirque2" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.352941 )
 position = Vector2( -1479.62, 1817.72 )
 rotation = -0.0856285
 scale = Vector2( 0.236365, 0.236365 )
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 
 [node name="Cirque4" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.164706 )
 position = Vector2( -1562.48, 1483.99 )
 rotation = -0.885835
 scale = Vector2( 0.174172, 0.174172 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 offset = Vector2( -672.091, -0.000732422 )
 
 [node name="Cirque5" type="Sprite" parent="fond et bounds/fond déco"]
@@ -186,7 +137,7 @@ self_modulate = Color( 1, 1, 1, 0.164706 )
 position = Vector2( -1562.48, 1483.99 )
 rotation = -0.242204
 scale = Vector2( 0.174172, 0.174172 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 offset = Vector2( -672.091, -0.000732422 )
 
 [node name="fond" type="Sprite" parent="fond et bounds"]
@@ -195,7 +146,7 @@ position = Vector2( 19.2443, 716.835 )
 scale = Vector2( 4.71329, 5.24046 )
 z_index = -500
 z_as_relative = false
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="fond3" type="Sprite" parent="fond et bounds"]
 self_modulate = Color( 0.964706, 0.964706, 0.964706, 1 )
@@ -203,7 +154,7 @@ position = Vector2( 32.1139, 4222.83 )
 scale = Vector2( 4.713, -5.24 )
 z_index = -500
 z_as_relative = false
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="fond2" type="Sprite" parent="fond et bounds"]
 self_modulate = Color( 0.964706, 0.964706, 0.964706, 1 )
@@ -211,16 +162,22 @@ position = Vector2( 0.86784, -2810.51 )
 scale = Vector2( 4.713, -5.24 )
 z_index = -500
 z_as_relative = false
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="2planbis" type="Sprite" parent="fond et bounds"]
 position = Vector2( 1049.32, 164.268 )
 z_index = -90
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 
 [node name="afficheQueen" type="AnimatedSprite" parent="."]
-position = Vector2( -418.972, 391.548 )
+position = Vector2( -301.104, -1489.12 )
 z_index = -100
 frames = SubResource( 1 )
 frame = 4
 playing = true
+
+[node name="textrure affichesfonds" type="Sprite" parent="."]
+position = Vector2( 24.4618, 256.853 )
+scale = Vector2( 3.55973, 3.75084 )
+z_index = -300
+texture = ExtResource( 22 )
