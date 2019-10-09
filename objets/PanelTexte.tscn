@@ -1,0 +1,24 @@
+[gd_scene format=2]
+
+[node name="Panel" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 200.0
+margin_top = 596.0
+margin_right = -200.0
+margin_bottom = -30.0
+
+[node name="texteBox" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+grow_horizontal = 2
+bbcode_enabled = true
+bbcode_text = "[center]Dans ce lieu de loisir, où le temps semble s'arrêter,
+histoire d'une soirée[center]"
+text = "Dans ce lieu de loisir, où le temps semble s'arrêter,
+histoire d'une soirée"
+scroll_active = false
