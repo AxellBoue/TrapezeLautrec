@@ -142,14 +142,14 @@ animations = [ {
 "name": "interaction",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 27 ), ExtResource( 32 ), ExtResource( 27 ), ExtResource( 33 ) ],
-"loop": true,
-"name": "bouge",
-"speed": 1.0
-}, {
 "frames": [ ExtResource( 30 ), ExtResource( 31 ) ],
 "loop": true,
 "name": "boucleFin",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 32 ), ExtResource( 27 ), ExtResource( 33 ) ],
+"loop": true,
+"name": "bouge",
 "speed": 1.0
 } ]
 
@@ -273,14 +273,14 @@ tracks/0/keys = {
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [ ExtResource( 49 ) ],
-"loop": false,
-"name": "eteint",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 49 ), ExtResource( 50 ) ],
 "loop": true,
 "name": "joue",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ) ],
+"loop": false,
+"name": "eteint",
 "speed": 5.0
 } ]
 
@@ -929,7 +929,7 @@ scale = Vector2( 1.2261, 1.2261 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "affiche"
-frame = 2
+frame = 5
 playing = true
 
 [node name="fondcirque" type="Sprite" parent="ilot cirque/decor ilot 2"]
@@ -1192,7 +1192,9 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -418.972, 391.548 )
+z_index = -100
 frames = SubResource( 16 )
+frame = 2
 playing = true
 [connection signal="body_entered" from="ilot depart" to="Lautrec" method="_on_ilot_body_entered"]
 [connection signal="body_exited" from="ilot depart" to="Lautrec" method="_on_ilot_body_exited"]
