@@ -391,6 +391,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [ -20, 100 ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("danseuse/baton:z_index")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ -21, 99 ]
+}
 
 [sub_resource type="SpriteFrames" id=15]
 animations = [ {
@@ -899,16 +911,16 @@ autoplay = "danseuse"
 anims/danseuse = SubResource( 14 )
 
 [node name="danseuse" type="Sprite" parent="ilot cirque/decor ilot 2/danseuse"]
-position = Vector2( -1231.51, 216.117 )
-rotation = -0.197883
-scale = Vector2( -0.125, 0.299 )
-z_index = 100
+position = Vector2( -1238.34, 193.365 )
+rotation = 0.21186
+scale = Vector2( 0.285, 0.299 )
+z_index = -20
 texture = ExtResource( 62 )
 
 [node name="baton" type="Sprite" parent="ilot cirque/decor ilot 2/danseuse"]
-position = Vector2( -1233.24, 258.687 )
+position = Vector2( -1242.99, 230.889 )
 scale = Vector2( 0.237073, 0.237073 )
-z_index = -1
+z_index = -21
 texture = ExtResource( 63 )
 
 [node name="affiche" type="AnimatedSprite" parent="ilot cirque/decor ilot 2"]
@@ -917,7 +929,7 @@ scale = Vector2( 1.2261, 1.2261 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "affiche"
-frame = 1
+frame = 2
 playing = true
 
 [node name="fondcirque" type="Sprite" parent="ilot cirque/decor ilot 2"]
@@ -1181,7 +1193,6 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -418.972, 391.548 )
 frames = SubResource( 16 )
-frame = 2
 playing = true
 [connection signal="body_entered" from="ilot depart" to="Lautrec" method="_on_ilot_body_entered"]
 [connection signal="body_exited" from="ilot depart" to="Lautrec" method="_on_ilot_body_exited"]
