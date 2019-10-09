@@ -5,6 +5,7 @@ onready var timer = get_node("Timer")
 var timerConnection
 
 var interactionIlot1 = 0
+var trappe = preload("res://objets/trappe.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,7 +17,9 @@ func _input(event):
 
 func add_inter_ilot_1 ():
 	interactionIlot1 += 1;
-	if interactionIlot1 >= 3 :
+	if interactionIlot1 == 3:
+		cree_trappe()
+	if interactionIlot1 >= 4 :
 		set_timer_connection("dezoom")
 		timer.wait_time = 1
 		timer.start()
@@ -29,6 +32,10 @@ func dezoom():
 
 func rezoom():
 	camera.change_zoom(1.2,5)
+
+func cree_trappe():
+	var newTrape = trappe.instance()
+	get_node("/root/Node2D/ilot depart").add_child(newTrape)
 	
 func set_timer_connection(var newC):
 	if timerConnection:

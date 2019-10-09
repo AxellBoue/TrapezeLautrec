@@ -411,6 +411,7 @@ forceSaut = 400
 position = Vector2( 1055.14, 4.58743 )
 
 [node name="zoneCamera" parent="ilot depart" instance=ExtResource( 8 )]
+editor/display_folded = true
 position = Vector2( -12.39, 238.404 )
 z_index = -200
 
@@ -427,6 +428,7 @@ position = Vector2( 945.305, 381.403 )
 polygon = PoolVector2Array( -1373.04, -21.4731, -1510.57, 93.7987, -1623.64, 208.085, -416.984, 195.84, -393.387, 162.897, -571.963, -35.0771 )
 
 [node name="decor" type="Node2D" parent="ilot depart"]
+editor/display_folded = true
 
 [node name="chapeaux" type="Node2D" parent="ilot depart/decor"]
 editor/display_folded = true
@@ -711,6 +713,7 @@ position = Vector2( 0, -3.05176e-005 )
 polygon = PoolVector2Array( 329.407, 32.7626, -403.726, 44.9207, -400.078, 1.15161, -300.382, -0.064209, 391.413, -6.14325, 397.492, 35.1943 )
 
 [node name="ilot cirque" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( -1325.42, 19.0781 )
 z_index = -50
 
@@ -789,6 +792,7 @@ scale = Vector2( 1.52049, 1.96389 )
 texture = ExtResource( 61 )
 
 [node name="ilot cabaret" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( -306.203, -1188.82 )
 scale = Vector2( 1.5, 1.5 )
 z_index = -50

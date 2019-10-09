@@ -28,7 +28,6 @@
 [ext_resource path="res://sprites/decor/ilot2cirque/fond cirque.png" type="Texture" id=26]
 [ext_resource path="res://sprites/decor/ilot2cirque/chevalet.png" type="Texture" id=27]
 
-
 [sub_resource type="Animation" id=1]
 resource_name = "danseuse"
 length = 5.0
@@ -134,18 +133,17 @@ polygon = PoolVector2Array( -62.5402, -316.368, -208.276, -263.163, -344.759, -1
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 editor/display_folded = true
 position = Vector2( -303.928, 259.961 )
-polygon = PoolVector2Array( -182.217, -33.8016, -205.868, -11.4645, -224.264, 12.1866, -210.467, 43.7214, -173.676, 60.8028, -86.9557, 83.7969, -5.26721, 86.6053, 193.096, 87.7427, 383.124, 46.3087, 395.984, -0.846985, 377.071, -32.749, 336.317, -60.7675, 231.456, -87.1192, 150.212, -96.2142, 50.6094, -99.0058, -70.8041, -83.723, -146.789, -55.6579 )
+polygon = PoolVector2Array( -182.217, -33.8016, -205.868, -11.4645, -224.145, 7.23602, -230.947, 61.6508, -218.704, 128.309, -94.9099, 129.669, 3.03674, 125.588, 219.335, 126.949, 400.265, 124.228, 423.391, 95.66, 426.112, 43.966, 408.427, -2.28656, 377.071, -32.749, 336.317, -60.7675, 231.456, -87.1192, 150.212, -96.2142, 50.6094, -99.0058, -70.8041, -83.723, -146.789, -55.6579 )
 
 [node name="vivid-colors-fragment-arena-circus-kyiv-171667" type="Sprite" parent="CollisionPolygon2D"]
 position = Vector2( 98.9849, 13.2558 )
 scale = Vector2( 1.51963, 1.35118 )
 
 [node name="zoneCollFond" parent="." instance=ExtResource( 3 )]
-editor/display_folded = true
 position = Vector2( -207.727, 123.179 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="zoneCollFond"]
-polygon = PoolVector2Array( 280.083, 88.2536, 255.767, 67.7768, 185.378, 44.7404, 102.191, 33.2222, 31.8021, 24.2636, -53.9443, 21.704, -139.691, 34.502, -213.919, 53.699, -263.436, 79.971, -287.896, 95.0233, -270.021, 60.2148, -116.655, -14.1304, 63.7971, -7.73135, 219.933, 5.06662, 271.125, 40.901 )
+polygon = PoolVector2Array( 287.739, 96.405, 255.767, 67.7768, 185.378, 44.7404, 102.191, 33.2222, 31.8021, 24.2636, -53.9443, 21.704, -139.691, 34.502, -213.919, 53.699, -263.436, 79.971, -287.896, 95.0233, -270.021, 60.2148, -116.655, -14.1304, 63.7971, -7.73135, 219.933, 5.06662, 271.125, 40.901 )
 
 [node name="decor ilot 2" type="Node2D" parent="."]
 editor/display_folded = true

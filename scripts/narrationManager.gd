@@ -8,7 +8,20 @@ var texte
 var p = 0
 
 export (Array) var intro = [3.5,"""Dans ce lieu de loisir, où le temps semble s'arrêter,
- histoire d'une soirée""",8.5,"les âmes et les esprits se perdent et s'abreuvent",11.5,"oubliant le monde extérieur, histoire d'une soirée.",15]
+ histoire d'une soirée""", 8.5,"les âmes et les esprits se perdent et s'abreuvent", 
+11.5,"oubliant le monde extérieur, histoire d'une soirée.",15]
+
+var cirque = [1,"""Ce lieu magique où le mouvement des corps 
+créé une chorégraphie somptueuse.""",5,
+"""Les artistes virevoltant de toutes parts, 
+tel le grand Léotard  de son vivant.""",10,
+"""Cette harmonie fascinante enivre les coeurs 
+d’une joie infinie.""",15,]
+
+var hp = [2,"Pourquoi suis-je ici?",5,
+"""Ces gens ne veulent pas mon bien.
+Ils m'enferment et me maltraitent.""", 10,
+"Pourquoi retient on des gens ici?",15]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,7 +30,7 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("test"):
-		lance_texte_intro()
+		pass
 
 func change_texte():
 	if p == 0:
@@ -32,8 +45,8 @@ func change_texte():
 		timer.stop()
 			
 
-func lance_texte_intro():
-	texte = intro
+func lance_texte(newTexte):
+	texte = newTexte
 	p = 0
 	timer.wait_time = texte[0]
 	timer.start()

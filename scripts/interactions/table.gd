@@ -36,7 +36,8 @@ func interaction():
 	if debutVoix && assis:
 		sm.play_new_son(sm.aspVoix, voixdebut) 
 		debutVoix = false
-		get_node("/root/Node2D/gameManager/narrationManager").lance_texte_intro()
+		var nm = get_node("/root/Node2D/gameManager/narrationManager")
+		nm.lance_texte(nm.intro)
 	assis = !assis
 
 func anim_texte_1(var num):

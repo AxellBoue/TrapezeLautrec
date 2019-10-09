@@ -20,7 +20,8 @@ var flip = 1
 
 # saut et chute
 export var gravite = 9
-export var forceSaut = 20
+export var forceSaut = 400
+var forceSautSpecial
 var mvtV = 0
 export (int) var maxGravite = 1500
 
@@ -70,6 +71,9 @@ func _input(event):
 	if event.is_action_pressed("interaction"):
 		if obj && isLautrec:
 			obj.do_interaction()
+			
+	if event.is_action_pressed("test"):
+		saut_special()
 
 func get_input():
 	velocity = Vector2()
@@ -101,32 +105,34 @@ func get_input():
 func _physics_process(delta):
 	if !isBloque:
 		get_input()
-		if surTrapeze :
-			global_position = poignee.global_position
-			
-		elif surIlot && !enSaut:
-			velocity = move_and_slide(velocity)
-			if velocity.x == 0 && velocity.y == 0 && anim.animation != "transformation":
-				anim.set_flip_h(false)
-				flip = 1
-				direction = "droite"
-				anim.play("LautrecIdle")
-				sm.stop_pas()
-			else :
-				if anim.animation != "transformation":
-					anim.play("lautrecMarche")
-					sm.play_pas()
-					
-		else : #if enSaut || !surIlot
-			mvtV += gravite
-			if mvtV >= maxGravite :
-				mvtV = maxGravite
-			velocity =Vector2(velocity.x, velocity.y + mvtV) #pas prendre en compte haut/bas ?
-			velocity = move_and_slide(velocity)
-			capteSol.position = Vector2(0,clamp(capteSol.position.y - mvtV*delta,0,200))
 	else :
 		velocity = Vector2(0,0)
+		
+	if surTrapeze :
+		global_position = poignee.global_position
 			
+	elif surIlot && !enSaut:
+		velocity = move_and_slide(velocity)
+		if velocity.x == 0 && velocity.y == 0 && anim.animation != "transformation":
+			anim.set_flip_h(false)
+			flip = 1
+			direction = "droite"
+			anim.play("LautrecIdle")
+			sm.stop_pas()
+		else :
+			if anim.animation != "transformation":
+				anim.play("lautrecMarche")
+				sm.play_pas()
+					
+	else : #if enSaut || !surIlot
+		mvtV += gravite
+		if mvtV >= maxGravite :
+			mvtV = maxGravite
+		velocity =Vector2(velocity.x, velocity.y + mvtV) #pas prendre en compte haut/bas ?
+		velocity = move_and_slide(velocity)
+		capteSol.position = Vector2(0,clamp(capteSol.position.y - mvtV*delta,0,200))
+
+
 ## mouvements et création de trapeze
 
 func saute( var force = forceSaut):
@@ -144,7 +150,6 @@ func fin_de_saut():
 	capteSol.position = Vector2(0,9)
 
 func _on_ilot_body_exited(body):
-	print ("exit")
 	if body == self:
 		surIlot = false
 		if !enSaut && !surTrapeze && anim.animation != "transformation":
@@ -154,7 +159,6 @@ func _on_ilot_body_exited(body):
 			sm.stop_pas()
 
 func _on_ilot_body_entered(body):
-	print ("enter")
 	if body == self:
 		surIlot = true
 		if !enSaut && !surTrapeze:
@@ -241,7 +245,11 @@ func _on_AnimatedSprite_animation_finished():
 		nextAnim = null
 		if sauteLater:
 			sauteLater = false
-			saute()
+			if forceSautSpecial :
+				saute(forceSautSpecial)
+				forceSautSpecial = null
+			else :
+				saute()
 			
 # interactions
 func set_visible(var b):
@@ -249,5 +257,10 @@ func set_visible(var b):
 
 func bloque(var b):
 	isBloque = b
+
+func saut_special():
+	bloque(true)
+	forceSautSpecial = 850
+	deviensLeotardAvecSaut()
 
 

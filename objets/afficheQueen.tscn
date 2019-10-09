@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sprites/decor/animqueen/animfreddie0.png" type="Texture" id=1]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie1.png" type="Texture" id=2]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie2.png" type="Texture" id=3]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie3.png" type="Texture" id=4]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie4.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="afficheQueen" type="AnimatedSprite"]
+position = Vector2( -418.972, 391.548 )
+z_index = -100
+frames = SubResource( 1 )
+frame = 4
+playing = true
