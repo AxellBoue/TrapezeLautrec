@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scripts/ilot.gd" type="Script" id=1]
+[ext_resource path="res://sprites/decor/dessins cirque/Cirque1.jpg" type="Texture" id=2]
+[ext_resource path="res://objets/zoneCollQueAPieds.tscn" type="PackedScene" id=3]
+
+
+[node name="ilot hp" type="Area2D"]
+editor/display_folded = true
+position = Vector2( -409.346, 1328.62 )
+z_index = -50
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2( -118.491, 60.6208 )
+polygon = PoolVector2Array( -245.953, -119.727, -243.42, 139.617, -246.209, 482.727, 700.53, 493.823, 700.53, -118.345 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2( -362.636, -64.1587 )
+color = Color( 0.937255, 0.909804, 0.909804, 1 )
+polygon = PoolVector2Array( -4.85289, -0.606323, 944.675, 3.21277, 935.009, 628.268, -2.06346, 604.717 )
+
+[node name="Cirque1" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0.905882 )
+position = Vector2( -311.933, 50.4 )
+rotation = -0.360899
+scale = Vector2( 0.56784, 0.56784 )
+z_index = -50
+texture = ExtResource( 2 )
+
+[node name="zoneCollFond" parent="." instance=ExtResource( 3 )]
+editor/display_folded = true
+position = Vector2( 75.5418, -104.755 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="zoneCollFond"]
+polygon = PoolVector2Array( -439.173, 28.9639, -439.173, -27.6167, 501.142, -18.1866, 502.49, 28.9639 )

@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/ilot.gd" type="Script" id=1]
+[ext_resource path="res://sprites/decor/ilot cancan/cancandroit.png" type="Texture" id=2]
+[ext_resource path="res://objets/zoneCollQueAPieds.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/decor/ilot cancan/cancangauche.png" type="Texture" id=4]
+
+
+[node name="ilot cabaret" type="Area2D"]
+editor/display_folded = true
+position = Vector2( -306.203, -1188.82 )
+scale = Vector2( 1.5, 1.5 )
+z_index = -50
+script = ExtResource( 1 )
+
+[node name="cancandroit" type="Sprite" parent="."]
+position = Vector2( -275.239, -49.7501 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -402.509, -2.77588 )
+polygon = PoolVector2Array( -47.0831, 87.7495, 6.85443, 89.0039, 9.99036, 55.1362, 27.5514, 52.6274, 38.2134, 87.7495, 70.1996, 87.1223, 97.1684, 77.7146, 95.2869, 56.3904, 123.51, 57.6448, 141.071, 78.969, 174.939, 78.3418, 186.855, 95.2757, 387.287, 90.5274, 385.459, 75.2875, 260.492, -33.8296, 233.267, -35.1778, 206.925, -56.502, 169.921, -54.6204, 150.479, -41.4496, 126.646, -37.6865, 94.6597, -37.6865, 39.4678, -27.0245, -28.2676, -0.682922 )
+
+[node name="zoneCollFond" parent="." instance=ExtResource( 3 )]
+position = Vector2( -311.081, -65.2267 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="zoneCollFond"]
+polygon = PoolVector2Array( -122.204, 54.869, -53.8413, 29.1545, -0.531006, 19.1198, 53.4065, 15.3566, 73.4763, 0.931519, 116.752, -0.322876, 102.954, -14.748, 41.4901, -16.0024, -100.88, 22.2556, -126.594, 38.5623 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="zoneCollFond"]
+position = Vector2( 150.882, 14.3698 )
+polygon = PoolVector2Array( 17.2882, 7.42505, -3.37503, 7.98444, 1.86972, 1.63556, 14.0154, 1.91162 )
+
+[node name="cancangauche" type="Sprite" parent="."]
+position = Vector2( 294.372, -48.2672 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2( 273.078, 8.80902 )
+polygon = PoolVector2Array( -235.856, 66.9288, -109.54, -45.1764, -81.119, -43.5974, -55.8558, -65.7028, 62.5652, -62.5449, 102.039, -45.1764, 122.565, -23.0712, 180.986, 6.92877, 193.618, 77.9814, 138.355, 79.5604, 138.355, 47.9814, 120.986, 52.7183, 109.934, 76.4025, 51.5126, 70.0867, 35.7231, 49.5604, 5.72308, 65.3499, -40.0663, 82.7183, -239.014, 82.7183 )
+
+[node name="zoneCollFond2" parent="." instance=ExtResource( 3 )]
+editor/display_folded = true
+position = Vector2( 343.669, -72.9485 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="zoneCollFond2"]
+polygon = PoolVector2Array( 110.217, 79.5648, 54.8929, 50.9321, 38.878, 34.4319, -3.82845, 12.1082, -127.58, 10.6522, -125.154, -2.45087, -5.76965, -5.84802, 50.5252, 18.9023, 78.6726, 48.0203, 97.114, 58.2117 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="zoneCollFond2"]
+position = Vector2( -161.605, 26.2062 )
+polygon = PoolVector2Array( -17.4169, 3.37274, 4.90696, 3.85809, 5.39225, -4.87732, -15.4757, -4.87732 )

@@ -144,7 +144,7 @@ func fin_de_saut():
 	capteSol.position = Vector2(0,9)
 
 func _on_ilot_body_exited(body):
-	# if body = lautrec ou body = truc de bas
+	print ("exit")
 	if body == self:
 		surIlot = false
 		if !enSaut && !surTrapeze && anim.animation != "transformation":
@@ -154,6 +154,7 @@ func _on_ilot_body_exited(body):
 			sm.stop_pas()
 
 func _on_ilot_body_entered(body):
+	print ("enter")
 	if body == self:
 		surIlot = true
 		if !enSaut && !surTrapeze:

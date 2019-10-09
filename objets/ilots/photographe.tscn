@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/ilot.gd" type="Script" id=1]
+[ext_resource path="res://objets/zoneCollQueAPieds.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/decor/photographe/photographer.png" type="Texture" id=3]
+[ext_resource path="res://scripts/interactions/photographe.gd" type="Script" id=4]
+[ext_resource path="res://objets/capte leotard.tscn" type="PackedScene" id=5]
+
+
+[node name="photographe" type="Area2D"]
+z_index = -50
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2( -118.491, 60.6208 )
+polygon = PoolVector2Array( 223.315, 9.20813, -16.9258, 66.4083, 0.234375, 220.849, 240.623, 282.292, 462.142, 210.211, 452.115, 54.9683 )
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2( -362.636, -64.1587 )
+color = Color( 0.963074, 1, 0.527344, 1 )
+polygon = PoolVector2Array( 232.939, 196.908, 444.58, 128.268, 690.541, 174.028, 707.701, 334.188, 490.34, 408.548, 232.939, 339.908 )
+
+[node name="zoneCollFond" parent="." instance=ExtResource( 2 )]
+position = Vector2( 115.582, 9.64539 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="zoneCollFond"]
+polygon = PoolVector2Array( -250.13, 102.958, -258.921, 76.5869, -30.3698, 9.77966, 140.165, 50.2157, 228.069, 67.7965, 214.004, 94.1678, -32.1278, 46.6995 )
+
+[node name="photographer" type="Sprite" parent="."]
+position = Vector2( 164.959, 34.4918 )
+texture = ExtResource( 3 )
+
+[node name="zone photo" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="capte leotard" parent="zone photo" instance=ExtResource( 5 )]
+editor/display_folded = true
+position = Vector2( -404.63, 23.3441 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="zone photo/capte leotard"]
+polygon = PoolVector2Array( -220.696, -160.001, -211.649, 77.792, -0.995361, 164.38, 169.595, 117.855, 214.828, -32.0581, 182.519, -189.725, -66.9055, -200.064 )

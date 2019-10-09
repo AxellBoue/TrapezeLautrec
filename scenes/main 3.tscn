@@ -23,8 +23,8 @@
 [ext_resource path="res://objets/feedback.tscn" type="PackedScene" id=21]
 [ext_resource path="res://sprites/decor/ilot 1/1plan.png" type="Texture" id=22]
 [ext_resource path="res://sprites/decor/ilot 1/2plan.png" type="Texture" id=23]
-[ext_resource path="res://sprites/decor/ilot 1/3plan.png" type="Texture" id=24]
-[ext_resource path="res://sprites/decor/ilot 1/3planbis.png" type="Texture" id=25]
+[ext_resource path="res://sprites/decor/ilot 1/3planbis.png" type="Texture" id=24]
+[ext_resource path="res://sprites/decor/ilot 1/3plan.png" type="Texture" id=25]
 [ext_resource path="res://sprites/decor/ilot 1/4plan.png" type="Texture" id=26]
 [ext_resource path="res://sprites/decor/ilot 1/5plan.png" type="Texture" id=27]
 [ext_resource path="res://sprites/decor/ilot 1/activation plan 5/5planactivation1.png" type="Texture" id=28]
@@ -105,13 +105,13 @@ flags = 4
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
 "frames": [ ExtResource( 24 ) ],
-"loop": false,
-"name": "ferme",
+"loop": true,
+"name": "ouvert",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 25 ) ],
-"loop": true,
-"name": "ouvert",
+"loop": false,
+"name": "ferme",
 "speed": 5.0
 } ]
 
@@ -357,12 +357,14 @@ zoom = Vector2( 0.7, 0.7 )
 [node name="moyenne" type="Node2D" parent="gameManager/cameraBox"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="texte 1" type="TextureRect" parent="CanvasLayer/Control"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = -60.0
@@ -409,7 +411,6 @@ forceSaut = 400
 position = Vector2( 1055.14, 4.58743 )
 
 [node name="zoneCamera" parent="ilot depart" instance=ExtResource( 8 )]
-editor/display_folded = true
 position = Vector2( -12.39, 238.404 )
 z_index = -200
 
