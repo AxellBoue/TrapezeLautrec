@@ -937,7 +937,7 @@ scale = Vector2( 1.2261, 1.2261 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "affiche"
-frame = 4
+frame = 6
 playing = true
 
 [node name="fondcirque" type="Sprite" parent="ilot cirque/decor ilot 2"]
@@ -1025,7 +1025,6 @@ position = Vector2( 75.5418, -104.755 )
 polygon = PoolVector2Array( -439.173, 28.9639, -439.173, -27.6167, 501.142, -18.1866, 502.49, 28.9639 )
 
 [node name="fond et bounds" type="Node2D" parent="."]
-editor/display_folded = true
 __meta__ = {
 "_edit_group_": true
 }
@@ -1185,7 +1184,6 @@ texture = ExtResource( 88 )
 position = Vector2( -418.972, 391.548 )
 z_index = -100
 frames = SubResource( 16 )
-frame = 3
 playing = true
 [connection signal="body_entered" from="ilot depart" to="Lautrec" method="_on_ilot_body_entered"]
 [connection signal="body_exited" from="ilot depart" to="Lautrec" method="_on_ilot_body_exited"]
