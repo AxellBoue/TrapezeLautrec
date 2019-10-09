@@ -274,14 +274,14 @@ tracks/0/keys = {
 
 [sub_resource type="SpriteFrames" id=11]
 animations = [ {
-"frames": [ ExtResource( 49 ), ExtResource( 50 ) ],
-"loop": true,
-"name": "joue",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 49 ) ],
 "loop": false,
 "name": "eteint",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ), ExtResource( 50 ) ],
+"loop": true,
+"name": "joue",
 "speed": 5.0
 } ]
 
@@ -520,6 +520,7 @@ collision_layer = 3
 forceSaut = 400
 
 [node name="ilot depart" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1055.14, 4.58743 )
 
 [node name="zoneCamera" parent="ilot depart" instance=ExtResource( 8 )]
@@ -540,9 +541,9 @@ position = Vector2( 945.305, 381.403 )
 polygon = PoolVector2Array( -1373.04, -21.4731, -1510.57, 93.7987, -1623.64, 208.085, -416.984, 195.84, -393.387, 162.897, -571.963, -35.0771 )
 
 [node name="decor" type="Node2D" parent="ilot depart"]
+editor/display_folded = true
 
 [node name="chapeaux" type="Node2D" parent="ilot depart/decor"]
-editor/display_folded = true
 position = Vector2( 9.66577, 228.757 )
 z_index = 100
 script = ExtResource( 9 )
@@ -824,6 +825,7 @@ position = Vector2( 0, -3.05176e-005 )
 polygon = PoolVector2Array( 329.407, 32.7626, -403.726, 44.9207, -400.078, 1.15161, -300.382, -0.064209, 391.413, -6.14325, 397.492, 35.1943 )
 
 [node name="ilot cirque" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( -1325.42, 19.0781 )
 z_index = -50
 
@@ -936,6 +938,7 @@ scale = Vector2( 1.2261, 1.2261 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "affiche"
+frame = 9
 playing = true
 
 [node name="fondcirque" type="Sprite" parent="ilot cirque/decor ilot 2"]
@@ -1023,10 +1026,8 @@ position = Vector2( 75.5418, -104.755 )
 polygon = PoolVector2Array( -439.173, 28.9639, -439.173, -27.6167, 501.142, -18.1866, 502.49, 28.9639 )
 
 [node name="fond et bounds" type="Node2D" parent="."]
-editor/display_folded = true
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="bordsTeleportent" type="Node2D" parent="fond et bounds"]
@@ -1069,9 +1070,6 @@ editor/display_folded = true
 position = Vector2( 1093.99, 427.107 )
 rotation = 0.481195
 z_index = -450
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="dernierplan2" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.129412 )
@@ -1161,9 +1159,6 @@ scale = Vector2( 4.71329, 5.24046 )
 z_index = -500
 z_as_relative = false
 texture = ExtResource( 87 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="fond3" type="Sprite" parent="fond et bounds"]
 self_modulate = Color( 0.964706, 0.964706, 0.964706, 1 )
@@ -1172,9 +1167,6 @@ scale = Vector2( 4.713, -5.24 )
 z_index = -500
 z_as_relative = false
 texture = ExtResource( 87 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="fond2" type="Sprite" parent="fond et bounds"]
 self_modulate = Color( 0.964706, 0.964706, 0.964706, 1 )
@@ -1183,18 +1175,11 @@ scale = Vector2( 4.713, -5.24 )
 z_index = -500
 z_as_relative = false
 texture = ExtResource( 87 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="2planbis" type="Sprite" parent="fond et bounds"]
-visible = false
 position = Vector2( 1049.32, 164.268 )
 z_index = -90
 texture = ExtResource( 88 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -418.972, 391.548 )
