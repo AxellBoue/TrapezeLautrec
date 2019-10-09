@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=2]
+[gd_scene load_steps=109 format=2]
 
 [ext_resource path="res://scripts/soundManager.gd" type="Script" id=1]
 [ext_resource path="res://scripts/narrationManager.gd" type="Script" id=2]
@@ -58,9 +58,9 @@
 [ext_resource path="res://sprites/decor/ilot2cirque/Henri_de_Toulouse-Lautrec_-_At_the_Circus_-_Free_Horses_-_Walters_372523.png" type="Texture" id=56]
 [ext_resource path="res://sprites/decor/ilot2cirque/Sans titre-2.png" type="Texture" id=57]
 [ext_resource path="res://sprites/decor/ilot2cirque/vivid-colors-fragment-arena-circus-kyiv-171667.png" type="Texture" id=58]
-[ext_resource path="res://sprites/decor/ilot2cirque/taches.png" type="Texture" id=59]
-[ext_resource path="res://sprites/decor/ilot2cirque/taches 2.png" type="Texture" id=60]
-[ext_resource path="res://sprites/decor/ilot2cirque/public.png" type="Texture" id=61]
+[ext_resource path="res://sprites/decor/ilot2cirque/côté cirque 2.png" type="Texture" id=59]
+[ext_resource path="res://sprites/decor/ilot2cirque/public.png" type="Texture" id=60]
+[ext_resource path="res://sprites/decor/ilot2cirque/côté cirque.png" type="Texture" id=61]
 [ext_resource path="res://sprites/decor/ilot2cirque/danseuse.png" type="Texture" id=62]
 [ext_resource path="res://sprites/decor/ilot2cirque/poto.png" type="Texture" id=63]
 [ext_resource path="res://sprites/decor/ilot2cirque/animaffiche/affiche0.png" type="Texture" id=64]
@@ -74,18 +74,24 @@
 [ext_resource path="res://sprites/decor/ilot2cirque/animaffiche/affiche8.png" type="Texture" id=72]
 [ext_resource path="res://sprites/decor/ilot2cirque/animaffiche/affiche9.png" type="Texture" id=73]
 [ext_resource path="res://sprites/decor/ilot2cirque/animaffiche/affiche10.png" type="Texture" id=74]
-[ext_resource path="res://sprites/decor/ilot2cirque/chevalet.png" type="Texture" id=75]
-[ext_resource path="res://sprites/decor/ilot cancan/cancandroit.png" type="Texture" id=76]
-[ext_resource path="res://sprites/decor/ilot cancan/cancangauche.png" type="Texture" id=77]
-[ext_resource path="res://sprites/decor/dessins cirque/Cirque1.jpg" type="Texture" id=78]
-[ext_resource path="res://objets/zoneLoop.tscn" type="PackedScene" id=79]
-[ext_resource path="res://sprites/decor/ilot1 vieux/dernierplan.png" type="Texture" id=80]
-[ext_resource path="res://sprites/lautrec interactions/queen moyen.jpg" type="Texture" id=81]
-[ext_resource path="res://sprites/decor/ilot cancan/Cancan(1).png" type="Texture" id=82]
-[ext_resource path="res://sprites/decor/dessins cirque/Cirque2.jpg" type="Texture" id=83]
-[ext_resource path="res://sprites/decor/dessins cirque/Cirque4.jpg" type="Texture" id=84]
-[ext_resource path="res://sprites/decor/fond.jpg" type="Texture" id=85]
-[ext_resource path="res://sprites/decor/ilot1 vieux/2planbis.png" type="Texture" id=86]
+[ext_resource path="res://sprites/decor/ilot2cirque/fond cirque.png" type="Texture" id=75]
+[ext_resource path="res://sprites/decor/ilot2cirque/chevalet.png" type="Texture" id=76]
+[ext_resource path="res://sprites/decor/ilot cancan/cancandroit.png" type="Texture" id=77]
+[ext_resource path="res://sprites/decor/ilot cancan/cancangauche.png" type="Texture" id=78]
+[ext_resource path="res://sprites/decor/dessins cirque/Cirque1.jpg" type="Texture" id=79]
+[ext_resource path="res://objets/zoneLoop.tscn" type="PackedScene" id=80]
+[ext_resource path="res://sprites/decor/ilot1 vieux/dernierplan.png" type="Texture" id=81]
+[ext_resource path="res://sprites/lautrec interactions/queen moyen.jpg" type="Texture" id=82]
+[ext_resource path="res://sprites/decor/ilot cancan/Cancan(1).png" type="Texture" id=83]
+[ext_resource path="res://sprites/decor/dessins cirque/Cirque2.jpg" type="Texture" id=84]
+[ext_resource path="res://sprites/decor/dessins cirque/Cirque4.jpg" type="Texture" id=85]
+[ext_resource path="res://sprites/decor/fond.jpg" type="Texture" id=86]
+[ext_resource path="res://sprites/decor/ilot1 vieux/2planbis.png" type="Texture" id=87]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie0.png" type="Texture" id=88]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie1.png" type="Texture" id=89]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie2.png" type="Texture" id=90]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie3.png" type="Texture" id=91]
+[ext_resource path="res://sprites/decor/animqueen/animfreddie4.png" type="Texture" id=92]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -373,6 +379,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( 0.285, 0.299 ), Vector2( 0.284617, 0.284617 ), Vector2( -0.34694, 0.34694 ), Vector2( -0.407497, 0.50062 ), Vector2( -0.573698, 0.47362 ), Vector2( -0.389069, 0.475825 ), Vector2( -0.125, 0.299 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("danseuse/danseuse:z_index")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ -20, 100 ]
+}
 
 [sub_resource type="SpriteFrames" id=15]
 animations = [ {
@@ -380,6 +398,14 @@ animations = [ {
 "loop": true,
 "name": "affiche",
 "speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
 } ]
 
 [node name="Node2D" type="Node2D"]
@@ -789,6 +815,7 @@ position = Vector2( -1325.42, 19.0781 )
 z_index = -50
 
 [node name="zoneCamera" parent="ilot cirque" instance=ExtResource( 8 )]
+editor/display_folded = true
 position = Vector2( -219.697, -24.9522 )
 scale = Vector2( 1.8, 1.8 )
 z_index = -200
@@ -826,9 +853,8 @@ z_index = -100
 texture = ExtResource( 54 )
 
 [node name="chapiteau-3" type="Sprite" parent="ilot cirque/decor ilot 2"]
-position = Vector2( -203.662, -431.37 )
+position = Vector2( -191.916, -551.339 )
 scale = Vector2( 3.31483, 3.31483 )
-z_index = 10
 texture = ExtResource( 55 )
 
 [node name="Henri_de_Toulouse-Lautrec_-_At_the_Circus_-_Free_Horses_-_Walters_372523" type="Sprite" parent="ilot cirque/decor ilot 2"]
@@ -849,61 +875,71 @@ scale = Vector2( 1.4254, 1.43084 )
 z_index = 2
 texture = ExtResource( 58 )
 
-[node name="tache droite" type="Sprite" parent="ilot cirque/decor ilot 2"]
-position = Vector2( 169.332, 9.05658 )
-scale = Vector2( 1.52049, 1.96389 )
+[node name="decorcotedroit" type="Sprite" parent="ilot cirque/decor ilot 2"]
+position = Vector2( 86.0173, 3.50476 )
+scale = Vector2( 1.93073, 1.96389 )
 texture = ExtResource( 59 )
 
-[node name="tache gauche" type="Sprite" parent="ilot cirque/decor ilot 2"]
-position = Vector2( -572.766, 9.05658 )
-scale = Vector2( 1.52049, 1.96389 )
-texture = ExtResource( 60 )
-
 [node name="public" type="Sprite" parent="ilot cirque/decor ilot 2"]
-position = Vector2( -104.969, 102.723 )
+position = Vector2( -104.969, 108.723 )
 rotation = 0.115558
 scale = Vector2( 0.263928, 0.263928 )
+texture = ExtResource( 60 )
+
+[node name="decorcotegauche" type="Sprite" parent="ilot cirque/decor ilot 2"]
+position = Vector2( -528.201, -71.441 )
+rotation = -0.118026
+scale = Vector2( 2.04088, 2.04451 )
+z_index = -10
 texture = ExtResource( 61 )
 
 [node name="danseuse" type="AnimationPlayer" parent="ilot cirque/decor ilot 2"]
-editor/display_folded = true
 autoplay = "danseuse"
 anims/danseuse = SubResource( 14 )
 
 [node name="danseuse" type="Sprite" parent="ilot cirque/decor ilot 2/danseuse"]
-position = Vector2( -1238.34, 193.365 )
-rotation = 0.21186
-scale = Vector2( 0.285, 0.299 )
+position = Vector2( -1231.51, 216.117 )
+rotation = -0.197883
+scale = Vector2( -0.125, 0.299 )
+z_index = 100
 texture = ExtResource( 62 )
 
 [node name="baton" type="Sprite" parent="ilot cirque/decor ilot 2/danseuse"]
-position = Vector2( -1242.99, 230.889 )
+position = Vector2( -1233.24, 258.687 )
 scale = Vector2( 0.237073, 0.237073 )
 z_index = -1
 texture = ExtResource( 63 )
 
 [node name="affiche" type="AnimatedSprite" parent="ilot cirque/decor ilot 2"]
-position = Vector2( -201.983, -128.199 )
+position = Vector2( -201.983, -155.958 )
 scale = Vector2( 1.2261, 1.2261 )
+z_index = -1
 frames = SubResource( 15 )
 animation = "affiche"
-frame = 4
+frame = 3
 playing = true
 
-[node name="chevalet" type="Sprite" parent="."]
-position = Vector2( -1358.69, 150.811 )
-scale = Vector2( 1.54113, 1.34696 )
-z_index = 20
+[node name="fondcirque" type="Sprite" parent="ilot cirque/decor ilot 2"]
+position = Vector2( -204.074, -142.868 )
+scale = Vector2( 1.11502, 1.11502 )
+z_index = -10
 texture = ExtResource( 75 )
 
+[node name="chevalet" type="Sprite" parent="ilot cirque"]
+position = Vector2( -33.2667, 131.733 )
+scale = Vector2( 1.54113, 1.34696 )
+z_index = 20
+texture = ExtResource( 76 )
+
 [node name="ilot cabaret" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( -306.203, -1188.82 )
 scale = Vector2( 1.5, 1.5 )
 z_index = -50
 
 [node name="cancandroit" type="Sprite" parent="ilot cabaret"]
 position = Vector2( -275.239, -49.7501 )
-texture = ExtResource( 76 )
+texture = ExtResource( 77 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ilot cabaret"]
 position = Vector2( -402.509, -2.77588 )
@@ -921,7 +957,7 @@ polygon = PoolVector2Array( 17.2882, 7.42505, -3.37503, 7.98444, 1.86972, 1.6355
 
 [node name="cancangauche" type="Sprite" parent="ilot cabaret"]
 position = Vector2( 294.372, -48.2672 )
-texture = ExtResource( 77 )
+texture = ExtResource( 78 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="ilot cabaret"]
 position = Vector2( 273.078, 8.80902 )
@@ -958,7 +994,7 @@ position = Vector2( -311.933, 50.4 )
 rotation = -0.360899
 scale = Vector2( 0.56784, 0.56784 )
 z_index = -50
-texture = ExtResource( 78 )
+texture = ExtResource( 79 )
 
 [node name="zoneCollFond" parent="ilot hp" instance=ExtResource( 53 )]
 editor/display_folded = true
@@ -977,21 +1013,21 @@ __meta__ = {
 [node name="bordsTeleportent" type="Node2D" parent="fond et bounds"]
 editor/display_folded = true
 
-[node name="haut" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 79 )]
+[node name="haut" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 80 )]
 editor/display_folded = true
 position = Vector2( 38.6101, -2001.18 )
 
 [node name="zonePop" type="Node2D" parent="fond et bounds/bordsTeleportent/haut"]
 position = Vector2( -27.3943, 4217.22 )
 
-[node name="bas" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 79 )]
+[node name="bas" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 80 )]
 editor/display_folded = true
 position = Vector2( 20.4951, 2504.48 )
 
 [node name="zonePop" type="Node2D" parent="fond et bounds/bordsTeleportent/bas"]
 position = Vector2( -0.525635, -4085.3 )
 
-[node name="gauche" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 79 )]
+[node name="gauche" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 80 )]
 editor/display_folded = true
 position = Vector2( -2558.81, 221.235 )
 rotation = 1.5708
@@ -1000,7 +1036,7 @@ horizontal = false
 [node name="zonePop" type="Node2D" parent="fond et bounds/bordsTeleportent/gauche"]
 position = Vector2( -209.375, -4794.11 )
 
-[node name="droite" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 79 )]
+[node name="droite" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 80 )]
 editor/display_folded = true
 position = Vector2( 2624.39, 350.78 )
 rotation = 1.5708
@@ -1022,7 +1058,7 @@ __meta__ = {
 self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( -1437.39, 2121.38 )
 rotation = -0.756591
-texture = ExtResource( 80 )
+texture = ExtResource( 81 )
 offset = Vector2( 0.000244141, -954.937 )
 
 [node name="dernierplan7" type="Sprite" parent="fond et bounds/fond déco"]
@@ -1030,65 +1066,65 @@ self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( -1026.02, 1674.71 )
 rotation = -0.756591
 scale = Vector2( -0.574561, 1.17584 )
-texture = ExtResource( 80 )
+texture = ExtResource( 81 )
 offset = Vector2( 0.000244141, -954.937 )
 
 [node name="dernierplan5" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( 422.421, 1001.67 )
 rotation = -2.68283
-texture = ExtResource( 80 )
+texture = ExtResource( 81 )
 offset = Vector2( 0.000244141, -954.937 )
 
 [node name="dernierplan6" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( 204.135, -428.652 )
 rotation = -2.68283
-texture = ExtResource( 80 )
+texture = ExtResource( 81 )
 offset = Vector2( 0.000244141, -954.937 )
 
 [node name="dernierplan4" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( -2571.56, 272.984 )
 rotation = -0.756591
-texture = ExtResource( 80 )
+texture = ExtResource( 81 )
 
 [node name="queen moyen" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.345098 )
 position = Vector2( -2012.29, 60.4302 )
-texture = ExtResource( 81 )
+texture = ExtResource( 82 )
 
 [node name="Cancan(1)" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.709804 )
 position = Vector2( 1044.76, 842.329 )
 rotation = -0.191668
 scale = Vector2( 3.42606, 4.15117 )
-texture = ExtResource( 82 )
+texture = ExtResource( 83 )
 
 [node name="queen moyen2" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.345098 )
 position = Vector2( -2161.62, 2508.36 )
 rotation = -0.838785
 scale = Vector2( 0.648039, 0.648039 )
-texture = ExtResource( 81 )
+texture = ExtResource( 82 )
 
 [node name="dernierplan3" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.227451 )
-texture = ExtResource( 80 )
+texture = ExtResource( 81 )
 
 [node name="Cirque2" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.352941 )
 position = Vector2( -1479.62, 1817.72 )
 rotation = -0.0856285
 scale = Vector2( 0.236365, 0.236365 )
-texture = ExtResource( 83 )
+texture = ExtResource( 84 )
 
 [node name="Cirque4" type="Sprite" parent="fond et bounds/fond déco"]
 self_modulate = Color( 1, 1, 1, 0.164706 )
 position = Vector2( -1562.48, 1483.99 )
 rotation = -0.885835
 scale = Vector2( 0.174172, 0.174172 )
-texture = ExtResource( 84 )
+texture = ExtResource( 85 )
 offset = Vector2( -672.091, -0.000732422 )
 
 [node name="Cirque5" type="Sprite" parent="fond et bounds/fond déco"]
@@ -1096,7 +1132,7 @@ self_modulate = Color( 1, 1, 1, 0.164706 )
 position = Vector2( -1562.48, 1483.99 )
 rotation = -0.242204
 scale = Vector2( 0.174172, 0.174172 )
-texture = ExtResource( 84 )
+texture = ExtResource( 85 )
 offset = Vector2( -672.091, -0.000732422 )
 
 [node name="fond" type="Sprite" parent="fond et bounds"]
@@ -1105,7 +1141,7 @@ position = Vector2( 19.2443, 716.835 )
 scale = Vector2( 4.71329, 5.24046 )
 z_index = -500
 z_as_relative = false
-texture = ExtResource( 85 )
+texture = ExtResource( 86 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1116,7 +1152,7 @@ position = Vector2( 32.1139, 4222.83 )
 scale = Vector2( 4.713, -5.24 )
 z_index = -500
 z_as_relative = false
-texture = ExtResource( 85 )
+texture = ExtResource( 86 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1127,7 +1163,7 @@ position = Vector2( 0.86784, -2810.51 )
 scale = Vector2( 4.713, -5.24 )
 z_index = -500
 z_as_relative = false
-texture = ExtResource( 85 )
+texture = ExtResource( 86 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -1136,10 +1172,16 @@ __meta__ = {
 visible = false
 position = Vector2( 1049.32, 164.268 )
 z_index = -90
-texture = ExtResource( 86 )
+texture = ExtResource( 87 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -418.972, 391.548 )
+frames = SubResource( 16 )
+frame = 4
+playing = true
 [connection signal="body_entered" from="ilot depart" to="Lautrec" method="_on_ilot_body_entered"]
 [connection signal="body_exited" from="ilot depart" to="Lautrec" method="_on_ilot_body_exited"]
 [connection signal="animation_finished" from="ilot depart/decor/5plan" to="ilot depart/decor/5plan" method="next_anim"]
