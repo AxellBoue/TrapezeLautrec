@@ -28,13 +28,6 @@ func _ready():
 	target = moyenne
 	global_position = target.global_position
 
-func _input(event):
-	if event.is_action_pressed("test"):
-		if targetIsMoyenne :
-			change_target_opti(Lautrec)
-		else :
-			change_target_opti(moyenne)
-
 func _physics_process(delta):
 	
 	if changeZoom :

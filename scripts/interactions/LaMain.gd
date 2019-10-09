@@ -14,6 +14,8 @@ func interaction():
 	
 func next_anim():
 	if active :
+		active = false
 		play("boucleFin")
+		get_node("/root/Node2D/gameManager").add_inter_ilot_1()
 
 

@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://particule4u.png" type="Texture" id=1]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 1
+emission_sphere_radius = 56.89
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 100, 0 )
+initial_velocity = 430.11
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 1.5
+
+[node name="Particles2D" type="Particles2D"]
+position = Vector2( 64.5311, 83.3537 )
+scale = Vector2( 0.35, 0.35 )
+amount = 62
+lifetime = 1.7
+speed_scale = 2.25
+explosiveness = 1.0
+randomness = 1.0
+process_material = SubResource( 1 )
+texture = ExtResource( 1 )

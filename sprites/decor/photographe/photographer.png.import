@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/2plan2.png-2eb51e83c2c895ecaf078c0003b4973a.stex"
+path="res://.import/photographer.png-23e0647a78da43aa26c2ddd6c015b97e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/decor/ilot1 vieux/2plan2.png"
-dest_files=[ "res://.import/2plan2.png-2eb51e83c2c895ecaf078c0003b4973a.stex" ]
+source_file="res://sprites/decor/photographe/photographer.png"
+dest_files=[ "res://.import/photographer.png-23e0647a78da43aa26c2ddd6c015b97e.stex" ]
 
 [params]
 
