@@ -13,7 +13,7 @@ func _ready():
 
 func _input(event):
 	if event.is_action_pressed("test"):
-		pass
+		cree_trappe()
 
 func add_inter_ilot_1 ():
 	interactionIlot1 += 1;
@@ -31,7 +31,7 @@ func dezoom():
 	timer.start()
 
 func rezoom():
-	camera.change_zoom(1.2,5)
+	camera.change_zoom(1.2,2)
 
 func cree_trappe():
 	var newTrape = trappe.instance()

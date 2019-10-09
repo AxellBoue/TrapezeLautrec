@@ -3,7 +3,7 @@ extends Node2D
 onready var lautrec = get_node("/root/Node2D/Lautrec")
 onready var rideaux = get_node("../../decor/rideaux")
 onready var sm = get_node("/root/Node2D/gameManager/soundManager")
-onready var sonRideaux = preload("res://sons/Rideau.wav")
+onready var sonRideaux = preload("res://sons/RideauV3.wav")
 var ouvert = false
 var interactionCompte = false
 

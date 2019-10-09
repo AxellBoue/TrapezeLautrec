@@ -8,6 +8,7 @@ export (bool) var horizontal = true
 func _ready():
 	perso = get_node("/root/Node2D/Lautrec")
 	zonePop = get_node("zonePop")
+# warning-ignore:return_value_discarded
 	connect("body_entered",self,"teleporte")
 
 

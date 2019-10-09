@@ -1,18 +1,19 @@
 extends Node2D
 
 var aspZoneCabaret
-#onready var sonCabaret = preload("res://sons/Ambiace bar musique.wav")
+onready var sonCabaret = preload("res://sons/Ambiace bar+musique_light.ogg")
 onready var sonVynile = preload("res://sons/Vinyle1.wav")
 var aspLautrec
 onready var sonPas = preload("res://sons/bruits pas_mixdown.wav")
 var aspVoix
-
+onready var voixCirque = preload("res://sons/Cirque Voix Off.wav")
+onready var voixHp = preload("res://sons/Asile Voix Off 1.wav")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	aspZoneCabaret = get_node("ASP cabaret")
-	#aspZoneCabaret.stream = sonCabaret
-	#aspZoneCabaret.play(0)
+	aspZoneCabaret.stream = sonCabaret
+	aspZoneCabaret.play(0)
 	aspLautrec = get_node("/root/Node2D/Lautrec/AudioStreamPlayer")
 	aspVoix = get_node("ASP voix")
 

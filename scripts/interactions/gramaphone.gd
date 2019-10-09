@@ -18,9 +18,9 @@ func interaction():
 	if isPlaying :
 		isPlaying = false
 		gramo.play("eteint")
-		#sm.play_new_son(sm.aspZoneCabaret,sm.sonVynile)
+		sm.play_new_son(sm.aspZoneCabaret,sm.sonVynile)
 	else :
 		isPlaying = true
 		gramo.play("joue")
-		#sm.play_new_son(sm.aspZoneCabaret,sm.sonCabaret)
+		sm.play_new_son(sm.aspZoneCabaret,sm.sonCabaret)
 	

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Asile Voix Off 1.wav-c95607632ac55d47ff44f69070e0eaff.sample"
+
+[deps]
+
+source_file="res://sons/Asile Voix Off 1.wav"
+dest_files=[ "res://.import/Asile Voix Off 1.wav-c95607632ac55d47ff44f69070e0eaff.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

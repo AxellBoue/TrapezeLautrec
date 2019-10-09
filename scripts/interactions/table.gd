@@ -5,7 +5,7 @@ var sm #sound manager
 var cameraBox
 
 var assis = false
-onready var sonChaise = preload("res://sons/chaise.wav")
+onready var sonChaise = preload("res://sons/chaise v2.wav")
 var debut = true
 
 # voix debut

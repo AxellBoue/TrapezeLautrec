@@ -73,7 +73,8 @@ func _input(event):
 			obj.do_interaction()
 			
 	if event.is_action_pressed("test"):
-		saut_special()
+		pass
+		#saut_special()
 
 func get_input():
 	velocity = Vector2()
