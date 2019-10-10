@@ -1,21 +1,22 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://objets/gameManager.tscn" type="PackedScene" id=1]
 [ext_resource path="res://typo/theme.tres" type="Theme" id=2]
 [ext_resource path="res://objets/PanelTexte.tscn" type="PackedScene" id=3]
-[ext_resource path="res://objets/Lautrec.tscn" type="PackedScene" id=4]
-[ext_resource path="res://objets/ilots/ilot depart.tscn" type="PackedScene" id=5]
-[ext_resource path="res://objets/ilots/ilot cirque.tscn" type="PackedScene" id=6]
-[ext_resource path="res://objets/ilots/ilot cabaret.tscn" type="PackedScene" id=7]
-[ext_resource path="res://objets/ilots/ilot hp.tscn" type="PackedScene" id=8]
-[ext_resource path="res://objets/ilots/photographe.tscn" type="PackedScene" id=9]
-[ext_resource path="res://objets/zoneLoop.tscn" type="PackedScene" id=10]
-[ext_resource path="res://sprites/decor/ilot1 vieux/dernierplan.png" type="Texture" id=11]
-[ext_resource path="res://sprites/lautrec interactions/queen moyen.jpg" type="Texture" id=12]
-[ext_resource path="res://sprites/decor/ilot cancan/Cancan(1).png" type="Texture" id=13]
-[ext_resource path="res://sprites/decor/dessins cirque/Cirque2.jpg" type="Texture" id=14]
-[ext_resource path="res://sprites/decor/dessins cirque/Cirque4.jpg" type="Texture" id=15]
-[ext_resource path="res://sprites/decor/fond.jpg" type="Texture" id=16]
+[ext_resource path="res://scripts/panelPause.gd" type="Script" id=4]
+[ext_resource path="res://objets/Lautrec.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objets/ilots/ilot depart.tscn" type="PackedScene" id=6]
+[ext_resource path="res://objets/ilots/ilot cirque.tscn" type="PackedScene" id=7]
+[ext_resource path="res://objets/ilots/ilot cabaret.tscn" type="PackedScene" id=8]
+[ext_resource path="res://objets/ilots/ilot hp.tscn" type="PackedScene" id=9]
+[ext_resource path="res://objets/ilots/photographe.tscn" type="PackedScene" id=10]
+[ext_resource path="res://objets/zoneLoop.tscn" type="PackedScene" id=11]
+[ext_resource path="res://sprites/decor/ilot1 vieux/dernierplan.png" type="Texture" id=12]
+[ext_resource path="res://sprites/lautrec interactions/queen moyen.jpg" type="Texture" id=13]
+[ext_resource path="res://sprites/decor/ilot cancan/Cancan(1).png" type="Texture" id=14]
+[ext_resource path="res://sprites/decor/dessins cirque/Cirque2.jpg" type="Texture" id=15]
+[ext_resource path="res://sprites/decor/dessins cirque/Cirque4.jpg" type="Texture" id=16]
+[ext_resource path="res://sprites/decor/fond.jpg" type="Texture" id=17]
 
 [node name="Node2D" type="Node2D"]
 
@@ -31,19 +32,60 @@ theme = ExtResource( 2 )
 
 [node name="Panel" parent="CanvasLayer/Control" instance=ExtResource( 3 )]
 
-[node name="Lautrec" parent="." instance=ExtResource( 4 )]
+[node name="panel pause" type="Panel" parent="CanvasLayer/Control"]
+pause_mode = 2
+self_modulate = Color( 1, 1, 1, 0.407843 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 30.0
+margin_right = -30.0
+margin_bottom = -30.0
+script = ExtResource( 4 )
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/panel pause"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/panel pause/CenterContainer"]
+margin_left = 402.0
+margin_top = 275.0
+margin_right = 562.0
+margin_bottom = 385.0
+
+[node name="Retour" type="Button" parent="CanvasLayer/Control/panel pause/CenterContainer/VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -76.0
+shortcut_in_tooltip = false
+text = "Retour"
+
+[node name="Recommencer" type="Button" parent="CanvasLayer/Control/panel pause/CenterContainer/VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 38.0
+margin_bottom = -38.0
+text = "Recommencer"
+
+[node name="Quitter" type="Button" parent="CanvasLayer/Control/panel pause/CenterContainer/VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 76.0
+text = "Quitter"
+
+[node name="Lautrec" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1042.99, 415.39 )
 collision_layer = 3
 
-[node name="ilot depart" parent="." instance=ExtResource( 5 )]
+[node name="ilot depart" parent="." instance=ExtResource( 6 )]
 
-[node name="ilot cirque" parent="." instance=ExtResource( 6 )]
+[node name="ilot cirque" parent="." instance=ExtResource( 7 )]
 
-[node name="ilot cabaret" parent="." instance=ExtResource( 7 )]
+[node name="ilot cabaret" parent="." instance=ExtResource( 8 )]
 
-[node name="ilot hp" parent="." instance=ExtResource( 8 )]
+[node name="ilot hp" parent="." instance=ExtResource( 9 )]
 
-[node name="photographe" parent="." instance=ExtResource( 9 )]
+[node name="photographe" parent="." instance=ExtResource( 10 )]
 position = Vector2( 1621.8, -1326.93 )
 
 [node name="fond et bounds" type="Node2D" parent="."]
@@ -55,21 +97,21 @@ __meta__ = {
 [node name="bordsTeleportent" type="Node2D" parent="fond et bounds"]
 editor/display_folded = true
 
-[node name="haut" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 10 )]
+[node name="haut" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 38.6101, -2001.18 )
 
 [node name="zonePop" type="Node2D" parent="fond et bounds/bordsTeleportent/haut"]
 position = Vector2( -27.3943, 4217.22 )
 
-[node name="bas" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 10 )]
+[node name="bas" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 20.4951, 2504.48 )
 
 [node name="zonePop" type="Node2D" parent="fond et bounds/bordsTeleportent/bas"]
 position = Vector2( -0.525635, -4085.3 )
 
-[node name="gauche" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 10 )]
+[node name="gauche" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( -2558.81, 221.235 )
 rotation = 1.5708
@@ -78,7 +120,7 @@ horizontal = false
 [node name="zonePop" type="Node2D" parent="fond et bounds/bordsTeleportent/gauche"]
 position = Vector2( -209.375, -4794.11 )
 
-[node name="droite" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 10 )]
+[node name="droite" parent="fond et bounds/bordsTeleportent" instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 2624.39, 350.78 )
 rotation = 1.5708
@@ -97,7 +139,7 @@ visible = false
 self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( -1437.39, 2121.38 )
 rotation = -0.756591
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 offset = Vector2( 0.000244141, -954.937 )
 
 [node name="dernierplan7" type="Sprite" parent="fond et bounds/fond déco"]
@@ -106,7 +148,7 @@ self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( -1026.02, 1674.71 )
 rotation = -0.756591
 scale = Vector2( -0.574561, 1.17584 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 offset = Vector2( 0.000244141, -954.937 )
 
 [node name="dernierplan5" type="Sprite" parent="fond et bounds/fond déco"]
@@ -114,7 +156,7 @@ visible = false
 self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( 422.421, 1001.67 )
 rotation = -2.68283
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 offset = Vector2( 0.000244141, -954.937 )
 
 [node name="dernierplan6" type="Sprite" parent="fond et bounds/fond déco"]
@@ -122,7 +164,7 @@ visible = false
 self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( 204.135, -428.652 )
 rotation = -2.68283
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 offset = Vector2( 0.000244141, -954.937 )
 
 [node name="dernierplan4" type="Sprite" parent="fond et bounds/fond déco"]
@@ -130,13 +172,13 @@ visible = false
 self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( -2571.56, 272.984 )
 rotation = -0.756591
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="queen moyen" type="Sprite" parent="fond et bounds/fond déco"]
 visible = false
 self_modulate = Color( 1, 1, 1, 0.345098 )
 position = Vector2( -2012.29, 60.4302 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="Cancan(1)" type="Sprite" parent="fond et bounds/fond déco"]
 visible = false
@@ -144,7 +186,7 @@ self_modulate = Color( 1, 1, 1, 0.709804 )
 position = Vector2( 1044.76, 842.329 )
 rotation = -0.191668
 scale = Vector2( 3.42606, 4.15117 )
-texture = ExtResource( 13 )
+texture = ExtResource( 14 )
 
 [node name="queen moyen2" type="Sprite" parent="fond et bounds/fond déco"]
 visible = false
@@ -152,12 +194,12 @@ self_modulate = Color( 1, 1, 1, 0.345098 )
 position = Vector2( -2161.62, 2508.36 )
 rotation = -0.838785
 scale = Vector2( 0.648039, 0.648039 )
-texture = ExtResource( 12 )
+texture = ExtResource( 13 )
 
 [node name="dernierplan3" type="Sprite" parent="fond et bounds/fond déco"]
 visible = false
 self_modulate = Color( 1, 1, 1, 0.227451 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Cirque2" type="Sprite" parent="fond et bounds/fond déco"]
 visible = false
@@ -165,7 +207,7 @@ self_modulate = Color( 1, 1, 1, 0.352941 )
 position = Vector2( -1479.62, 1817.72 )
 rotation = -0.0856285
 scale = Vector2( 0.236365, 0.236365 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 
 [node name="Cirque4" type="Sprite" parent="fond et bounds/fond déco"]
 visible = false
@@ -173,7 +215,7 @@ self_modulate = Color( 1, 1, 1, 0.164706 )
 position = Vector2( -1562.48, 1483.99 )
 rotation = -0.885835
 scale = Vector2( 0.174172, 0.174172 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 offset = Vector2( -672.091, -0.000732422 )
 
 [node name="Cirque5" type="Sprite" parent="fond et bounds/fond déco"]
@@ -182,7 +224,7 @@ self_modulate = Color( 1, 1, 1, 0.164706 )
 position = Vector2( -1562.48, 1483.99 )
 rotation = -0.242204
 scale = Vector2( 0.174172, 0.174172 )
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 offset = Vector2( -672.091, -0.000732422 )
 
 [node name="fond" type="Sprite" parent="fond et bounds"]
@@ -191,7 +233,7 @@ position = Vector2( 19.2443, 716.835 )
 scale = Vector2( 4.71329, 5.24046 )
 z_index = -500
 z_as_relative = false
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 
 [node name="fond3" type="Sprite" parent="fond et bounds"]
 self_modulate = Color( 0.964706, 0.964706, 0.964706, 1 )
@@ -199,7 +241,7 @@ position = Vector2( 32.1139, 4222.83 )
 scale = Vector2( 4.713, -5.24 )
 z_index = -500
 z_as_relative = false
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 
 [node name="fond2" type="Sprite" parent="fond et bounds"]
 self_modulate = Color( 0.964706, 0.964706, 0.964706, 1 )
@@ -207,4 +249,7 @@ position = Vector2( 0.86784, -2810.51 )
 scale = Vector2( 4.713, -5.24 )
 z_index = -500
 z_as_relative = false
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
+[connection signal="pressed" from="CanvasLayer/Control/panel pause/CenterContainer/VBoxContainer/Retour" to="CanvasLayer/Control/panel pause" method="_on_Retour_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/panel pause/CenterContainer/VBoxContainer/Recommencer" to="CanvasLayer/Control/panel pause" method="_on_Recommencer_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/panel pause/CenterContainer/VBoxContainer/Quitter" to="CanvasLayer/Control/panel pause" method="_on_Quitter_pressed"]

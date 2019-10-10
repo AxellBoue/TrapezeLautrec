@@ -1,5 +1,6 @@
 extends Node2D
 
+onready var pausePanel = get_node("/root/Node2D/CanvasLayer/Control/panel pause")
 onready var camera = get_node("cameraBox")
 onready var timer = get_node("Timer")
 var timerConnection
@@ -9,11 +10,16 @@ var trappe = preload("res://objets/trappe.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	pausePanel.visible = false
 	pass # Replace with function body.
 
 func _input(event):
 	if event.is_action_pressed("test"):
-		cree_trappe()
+		#cree_trappe()
+		pass
+	if event.is_action_pressed("pause"):
+		pausePanel.visible = true
+		pausePanel.pause()
 
 func add_inter_ilot_1 ():
 	interactionIlot1 += 1;
