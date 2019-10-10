@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://scripts/ilot.gd" type="Script" id=1]
 [ext_resource path="res://objets/zoneCamera.tscn" type="PackedScene" id=2]
@@ -15,12 +15,12 @@
 [ext_resource path="res://sprites/decor/chapeauxFleurs/hommegauchefleur4.png" type="Texture" id=13]
 [ext_resource path="res://objets/objInteractif.tscn" type="PackedScene" id=14]
 [ext_resource path="res://objets/feedback.tscn" type="PackedScene" id=15]
-[ext_resource path="res://sprites/logo/1.png" type="Texture" id=16]
-[ext_resource path="res://sprites/logo/5.png" type="Texture" id=17]
-[ext_resource path="res://sprites/logo/3.png" type="Texture" id=18]
-[ext_resource path="res://sprites/logo/2.png" type="Texture" id=19]
-[ext_resource path="res://sprites/logo/4.png" type="Texture" id=20]
-[ext_resource path="res://sprites/logo/logo fixe.png" type="Texture" id=21]
+[ext_resource path="res://sprites/logo/logo fixe.png" type="Texture" id=16]
+[ext_resource path="res://sprites/logo/1.png" type="Texture" id=17]
+[ext_resource path="res://sprites/logo/5.png" type="Texture" id=18]
+[ext_resource path="res://sprites/logo/3.png" type="Texture" id=19]
+[ext_resource path="res://sprites/logo/2.png" type="Texture" id=20]
+[ext_resource path="res://sprites/logo/4.png" type="Texture" id=21]
 [ext_resource path="res://sprites/decor/ilot 1/1plan.png" type="Texture" id=22]
 [ext_resource path="res://sprites/decor/ilot 1/2plan.png" type="Texture" id=23]
 [ext_resource path="res://sprites/decor/ilot 1/2plangrand.png" type="Texture" id=24]
@@ -40,17 +40,18 @@
 [ext_resource path="res://sprites/decor/ilot 1/dernierplan.png" type="Texture" id=38]
 [ext_resource path="res://sprites/decor/ilot 1/animdanseuses/danseuses0.png" type="Texture" id=39]
 [ext_resource path="res://sprites/decor/ilot 1/animdanseuses/danseuses1.png" type="Texture" id=40]
-[ext_resource path="res://scripts/interactions/table.gd" type="Script" id=41]
-[ext_resource path="res://sprites/lautrec interactions/lautrecassis.png" type="Texture" id=42]
-[ext_resource path="res://sprites/lautrec interactions/table.png" type="Texture" id=43]
-[ext_resource path="res://sprites/lautrec interactions/chaiselautrec.png" type="Texture" id=44]
-[ext_resource path="res://sons/chaise.wav" type="AudioStream" id=45]
-[ext_resource path="res://scripts/interactions/gramaphone.gd" type="Script" id=46]
-[ext_resource path="res://sprites/lautrec interactions/gramophone1.png" type="Texture" id=47]
-[ext_resource path="res://sprites/lautrec interactions/gramophone2.png" type="Texture" id=48]
-[ext_resource path="res://scripts/interactions/corde.gd" type="Script" id=49]
-[ext_resource path="res://sprites/lautrec interactions/corde.png" type="Texture" id=50]
-[ext_resource path="res://objets/zoneCollQueAPieds.tscn" type="PackedScene" id=51]
+[ext_resource path="res://objets/ilots/tutu bas.tscn" type="PackedScene" id=41]
+[ext_resource path="res://scripts/interactions/table.gd" type="Script" id=42]
+[ext_resource path="res://sprites/lautrec interactions/lautrecassis.png" type="Texture" id=43]
+[ext_resource path="res://sprites/lautrec interactions/table.png" type="Texture" id=44]
+[ext_resource path="res://sprites/lautrec interactions/chaiselautrec.png" type="Texture" id=45]
+[ext_resource path="res://sons/chaise.wav" type="AudioStream" id=46]
+[ext_resource path="res://scripts/interactions/gramaphone.gd" type="Script" id=47]
+[ext_resource path="res://sprites/lautrec interactions/gramophone1.png" type="Texture" id=48]
+[ext_resource path="res://sprites/lautrec interactions/gramophone2.png" type="Texture" id=49]
+[ext_resource path="res://scripts/interactions/corde.gd" type="Script" id=50]
+[ext_resource path="res://sprites/lautrec interactions/corde.png" type="Texture" id=51]
+[ext_resource path="res://objets/zoneCollQueAPieds.tscn" type="PackedScene" id=52]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -85,15 +86,15 @@ animations = [ {
 "name": "cache",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "clignote",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 21 ) ],
+"frames": [ ExtResource( 16 ) ],
 "loop": false,
 "name": "fixe",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "clignote",
+"speed": 10.0
 } ]
 
 [sub_resource type="SpriteFrames" id=4]
@@ -127,7 +128,7 @@ animations = [ {
 "speed": 1.0
 } ]
 
-[sub_resource type="SpriteFrames" id=10]
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ ExtResource( 39 ), ExtResource( 40 ) ],
 "loop": true,
@@ -135,20 +136,20 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="SpriteFrames" id=11]
+[sub_resource type="SpriteFrames" id=7]
 animations = [ {
-"frames": [ ExtResource( 47 ) ],
+"frames": [ ExtResource( 48 ) ],
 "loop": false,
 "name": "eteint",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 47 ), ExtResource( 48 ) ],
+"frames": [ ExtResource( 48 ), ExtResource( 49 ) ],
 "loop": true,
 "name": "joue",
 "speed": 5.0
 } ]
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=8]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("cordeSprite:position")
@@ -177,7 +178,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=9]
 tracks/0/type = "value"
 tracks/0/path = NodePath("cordeSprite:position")
 tracks/0/interp = 1
@@ -290,8 +291,6 @@ animation = "ferme"
 position = Vector2( 0.420532, 24.2717 )
 scale = Vector2( 0.537, 0.537 )
 z_index = -130
-animation = "pas la"
-frame = -1
 
 [node name="4plan" type="Sprite" parent="decor"]
 z_index = -150
@@ -323,8 +322,11 @@ editor/display_folded = true
 position = Vector2( 1053.63, 174.851 )
 rotation = -0.199941
 z_index = -121
-frames = SubResource( 10 )
+frames = SubResource( 6 )
+frame = 1
 playing = true
+
+[node name="tutu bas" parent="decor" instance=ExtResource( 41 )]
 
 [node name="objets" type="Node2D" parent="."]
 editor/display_folded = true
@@ -332,10 +334,10 @@ editor/display_folded = true
 [node name="table" type="Node2D" parent="objets"]
 editor/display_folded = true
 position = Vector2( 52.6613, 380.246 )
-script = ExtResource( 41 )
+script = ExtResource( 42 )
 
 [node name="lautrecAssis" type="Sprite" parent="objets/table"]
-texture = ExtResource( 42 )
+texture = ExtResource( 43 )
 
 [node name="table sans lautrec" type="Node2D" parent="objets/table"]
 editor/display_folded = true
@@ -345,14 +347,14 @@ z_index = -10
 [node name="table" type="Sprite" parent="objets/table/table sans lautrec"]
 position = Vector2( -0.820801, -8.66431 )
 scale = Vector2( 0.236, 0.236 )
-texture = ExtResource( 43 )
+texture = ExtResource( 44 )
 
 [node name="chaiselautrec" type="Sprite" parent="objets/table/table sans lautrec"]
-texture = ExtResource( 44 )
+texture = ExtResource( 45 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="objets/table"]
 position = Vector2( -17.1047, 6.51608 )
-stream = ExtResource( 45 )
+stream = ExtResource( 46 )
 volume_db = -20.194
 bus = "bruits"
 
@@ -377,7 +379,7 @@ frames = SubResource( 3 )
 
 [node name="gramaphone" type="Node2D" parent="objets"]
 position = Vector2( -315.182, 364.519 )
-script = ExtResource( 46 )
+script = ExtResource( 47 )
 
 [node name="objInteractif2" parent="objets/gramaphone" instance=ExtResource( 14 )]
 editor/display_folded = true
@@ -400,13 +402,13 @@ position = Vector2( 20.3994, -110.774 )
 frames = SubResource( 3 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="objets/gramaphone/objInteractif2"]
-stream = ExtResource( 45 )
+stream = ExtResource( 46 )
 bus = "bruits"
 
 [node name="gramophone1" type="AnimatedSprite" parent="objets/gramaphone"]
 position = Vector2( 14.0627, -26.9636 )
 z_index = -5
-frames = SubResource( 11 )
+frames = SubResource( 7 )
 animation = "eteint"
 playing = true
 
@@ -414,22 +416,22 @@ playing = true
 position = Vector2( -412.177, 448.423 )
 scale = Vector2( 0.236, 0.236 )
 z_index = -50
-texture = ExtResource( 43 )
+texture = ExtResource( 44 )
 
 [node name="corde" type="Node2D" parent="objets"]
 editor/display_folded = true
 position = Vector2( 262.774, 69.5816 )
-script = ExtResource( 49 )
+script = ExtResource( 50 )
 
 [node name="cordeSprite" type="Sprite" parent="objets/corde"]
 position = Vector2( 0, 6.2 )
 scale = Vector2( 0.77, 0.77 )
-texture = ExtResource( 50 )
+texture = ExtResource( 51 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="objets/corde"]
 autoplay = "idle"
-anims/bouge = SubResource( 12 )
-anims/idle = SubResource( 13 )
+anims/bouge = SubResource( 8 )
+anims/idle = SubResource( 9 )
 
 [node name="objInteractif" parent="objets/corde" instance=ExtResource( 14 )]
 editor/display_folded = true
@@ -451,7 +453,7 @@ polygon = PoolVector2Array( -60.1853, -7.56149, -51.6306, 36.157, -15.399, 64.62
 position = Vector2( -47.0072, -43.0281 )
 frames = SubResource( 3 )
 
-[node name="zoneColl" parent="." instance=ExtResource( 51 )]
+[node name="zoneColl" parent="." instance=ExtResource( 52 )]
 editor/display_folded = true
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="zoneColl"]
