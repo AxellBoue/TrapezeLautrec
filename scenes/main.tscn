@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://objets/gameManager.tscn" type="PackedScene" id=1]
 [ext_resource path="res://typo/theme.tres" type="Theme" id=2]
@@ -17,6 +17,22 @@
 [ext_resource path="res://sprites/decor/dessins cirque/Cirque2.jpg" type="Texture" id=15]
 [ext_resource path="res://sprites/decor/dessins cirque/Cirque4.jpg" type="Texture" id=16]
 [ext_resource path="res://sprites/decor/fond.jpg" type="Texture" id=17]
+[ext_resource path="res://sprites/decor/elementfond/fond1.png" type="Texture" id=18]
+[ext_resource path="res://sprites/decor/elementfond/fond2.png" type="Texture" id=19]
+[ext_resource path="res://sprites/decor/elementfond/fond3.png" type="Texture" id=20]
+[ext_resource path="res://sprites/decor/elementfond/fond4.png" type="Texture" id=21]
+[ext_resource path="res://sprites/decor/elementfond/fond5.png" type="Texture" id=22]
+[ext_resource path="res://sprites/decor/elementfond/fond6.png" type="Texture" id=23]
+[ext_resource path="res://sprites/decor/elementfond/fond7.png" type="Texture" id=24]
+[ext_resource path="res://sprites/decor/elementfond/fond8.png" type="Texture" id=25]
+[ext_resource path="res://sprites/decor/elementfond/fond9.png" type="Texture" id=26]
+[ext_resource path="res://sprites/decor/elementfond/fond10.png" type="Texture" id=27]
+[ext_resource path="res://sprites/decor/elementfond/fond11.png" type="Texture" id=28]
+[ext_resource path="res://sprites/decor/elementfond/fond12.png" type="Texture" id=29]
+[ext_resource path="res://sprites/decor/elementfond/fond13.png" type="Texture" id=30]
+[ext_resource path="res://sprites/decor/elementfond/fond14.png" type="Texture" id=31]
+[ext_resource path="res://sprites/decor/elementfond/fond15.png" type="Texture" id=32]
+[ext_resource path="res://sprites/decor/elementfond/fond16.png" type="Texture" id=33]
 
 [node name="Node2D" type="Node2D"]
 
@@ -50,6 +66,7 @@ position = Vector2( 1621.8, -1326.93 )
 
 [node name="fond et bounds" type="Node2D" parent="."]
 editor/display_folded = true
+position = Vector2( 0, -4.20483 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -210,3 +227,67 @@ scale = Vector2( 4.713, -5.24 )
 z_index = -500
 z_as_relative = false
 texture = ExtResource( 17 )
+
+[node name="fond1" type="Sprite" parent="."]
+position = Vector2( 1596.91, 1890.24 )
+texture = ExtResource( 18 )
+
+[node name="fond2" type="Sprite" parent="."]
+position = Vector2( -871.925, -746.595 )
+texture = ExtResource( 19 )
+
+[node name="fond3" type="Sprite" parent="."]
+position = Vector2( -1962.05, 907.611 )
+texture = ExtResource( 20 )
+
+[node name="fond4" type="Sprite" parent="."]
+position = Vector2( 325.948, -695.891 )
+texture = ExtResource( 21 )
+
+[node name="fond5" type="Sprite" parent="."]
+position = Vector2( 959.909, 2351.2 )
+texture = ExtResource( 22 )
+
+[node name="fond6" type="Sprite" parent="."]
+position = Vector2( -1235.44, 2233.79 )
+texture = ExtResource( 23 )
+
+[node name="fond7" type="Sprite" parent="."]
+position = Vector2( 522.143, 2094.17 )
+texture = ExtResource( 24 )
+
+[node name="fond8" type="Sprite" parent="."]
+position = Vector2( -1400.24, -1493.8 )
+texture = ExtResource( 25 )
+
+[node name="fond9" type="Sprite" parent="."]
+position = Vector2( 2176.63, -1608.56 )
+texture = ExtResource( 26 )
+
+[node name="fond10" type="Sprite" parent="."]
+position = Vector2( -764.37, 814.345 )
+texture = ExtResource( 27 )
+
+[node name="fond11" type="Sprite" parent="."]
+position = Vector2( -290.501, -1530.5 )
+texture = ExtResource( 28 )
+
+[node name="fond12" type="Sprite" parent="."]
+position = Vector2( -1334.95, 1632.9 )
+texture = ExtResource( 29 )
+
+[node name="fond13" type="Sprite" parent="."]
+position = Vector2( -2148.99, -970.043 )
+texture = ExtResource( 30 )
+
+[node name="fond14" type="Sprite" parent="."]
+position = Vector2( 2164.62, -623.171 )
+texture = ExtResource( 31 )
+
+[node name="fond15" type="Sprite" parent="."]
+position = Vector2( -2085.14, 1738.55 )
+texture = ExtResource( 32 )
+
+[node name="fond16" type="Sprite" parent="."]
+position = Vector2( 2144.49, 1285.95 )
+texture = ExtResource( 33 )
