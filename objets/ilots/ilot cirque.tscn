@@ -175,7 +175,7 @@ z_index = 2
 texture = ExtResource( 7 )
 
 [node name="foule" type="Sprite" parent="decor ilot 2"]
-position = Vector2( -198.058, 306.366 )
+position = Vector2( -198.058, 292.73 )
 scale = Vector2( 0.625453, 0.781843 )
 z_index = 180
 texture = ExtResource( 8 )
@@ -205,6 +205,7 @@ z_index = -10
 texture = ExtResource( 12 )
 
 [node name="danseuse" type="AnimationPlayer" parent="decor ilot 2"]
+editor/display_folded = true
 autoplay = "danseuse"
 anims/danseuse = SubResource( 1 )
 
@@ -237,7 +238,7 @@ z_index = -10
 texture = ExtResource( 26 )
 
 [node name="fondationcirque" type="Sprite" parent="decor ilot 2"]
-position = Vector2( -192.504, 542.49 )
+position = Vector2( -213.988, 477.945 )
 texture = ExtResource( 27 )
 
 [node name="chevalet" type="Sprite" parent="."]

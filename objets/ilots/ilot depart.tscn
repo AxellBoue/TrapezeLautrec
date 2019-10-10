@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://scripts/ilot.gd" type="Script" id=1]
 [ext_resource path="res://objets/zoneCamera.tscn" type="PackedScene" id=2]
@@ -56,7 +56,6 @@
 [ext_resource path="res://scripts/interactions/corde.gd" type="Script" id=54]
 [ext_resource path="res://sprites/lautrec interactions/corde.png" type="Texture" id=55]
 [ext_resource path="res://objets/zoneCollQueAPieds.tscn" type="PackedScene" id=56]
-[ext_resource path="res://objets/trappe.tscn" type="PackedScene" id=57]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -342,6 +341,7 @@ position = Vector2( 1053.63, 174.851 )
 rotation = -0.199941
 z_index = -121
 frames = SubResource( 6 )
+frame = 1
 playing = true
 
 [node name="tutu bas" parent="decor" instance=ExtResource( 41 )]
@@ -484,7 +484,5 @@ editor/display_folded = true
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="zoneColl"]
 position = Vector2( 0, -3.05176e-005 )
 polygon = PoolVector2Array( 329.407, 32.7626, -403.726, 44.9207, -400.078, 1.15161, -300.382, -0.064209, 391.413, -6.14325, 397.492, 35.1943 )
-
-[node name="trape" parent="." instance=ExtResource( 57 )]
 [connection signal="animation_finished" from="decor/5plan" to="decor/5plan" method="next_anim"]
 [connection signal="animation_finished" from="objets/table/lautrecAssis" to="objets/table" method="fin_anim"]
