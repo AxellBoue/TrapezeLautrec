@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://scripts/ilot.gd" type="Script" id=1]
 [ext_resource path="res://objets/zoneCamera.tscn" type="PackedScene" id=2]
@@ -25,9 +25,11 @@
 [ext_resource path="res://sprites/decor/ilot2cirque/animaffiche/affiche8.png" type="Texture" id=23]
 [ext_resource path="res://sprites/decor/ilot2cirque/animaffiche/affiche9.png" type="Texture" id=24]
 [ext_resource path="res://sprites/decor/ilot2cirque/animaffiche/affiche10.png" type="Texture" id=25]
-[ext_resource path="res://sprites/decor/ilot2cirque/fond cirque.png" type="Texture" id=26]
-[ext_resource path="res://sprites/decor/ilot2cirque/fondationcirque/fondationcirque.png" type="Texture" id=27]
-[ext_resource path="res://sprites/decor/ilot2cirque/chevalet.png" type="Texture" id=28]
+[ext_resource path="res://scripts/interactions/afficheSeDeroule.gd" type="Script" id=26]
+[ext_resource path="res://objets/capte leotard.tscn" type="PackedScene" id=27]
+[ext_resource path="res://sprites/decor/ilot2cirque/fond cirque.png" type="Texture" id=28]
+[ext_resource path="res://sprites/decor/ilot2cirque/fondationcirque/fondationcirque.png" type="Texture" id=29]
+[ext_resource path="res://sprites/decor/ilot2cirque/chevalet.png" type="Texture" id=30]
 
 [sub_resource type="Animation" id=1]
 resource_name = "danseuse"
@@ -112,6 +114,11 @@ animations = [ {
 "loop": false,
 "name": "affiche",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": false,
+"name": "pliee",
+"speed": 5.0
 } ]
 
 [node name="ilot cirque" type="Area2D"]
@@ -165,7 +172,7 @@ texture = ExtResource( 5 )
 [node name="chapiteau-3" type="Sprite" parent="decor ilot 2"]
 position = Vector2( -193.916, -552.339 )
 scale = Vector2( 3.31483, 3.31483 )
-z_index = 50
+z_index = -2
 texture = ExtResource( 6 )
 
 [node name="Henri_de_Toulouse-Lautrec_-_At_the_Circus_-_Free_Horses_-_Walters_372523" type="Sprite" parent="decor ilot 2"]
@@ -223,26 +230,34 @@ z_index = 99
 texture = ExtResource( 14 )
 
 [node name="affiche" type="AnimatedSprite" parent="decor ilot 2"]
+editor/display_folded = true
 position = Vector2( -199.333, -158.608 )
 scale = Vector2( 1.2261, 1.2261 )
-z_index = -1
+z_index = -5
 frames = SubResource( 2 )
-animation = "affiche"
-frame = 10
+animation = "pliee"
 playing = true
+script = ExtResource( 26 )
+
+[node name="capte leotard" parent="decor ilot 2/affiche" instance=ExtResource( 27 )]
+position = Vector2( -13.2678, -164.521 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="decor ilot 2/affiche/capte leotard"]
+polygon = PoolVector2Array( -173.401, -31.3607, -103.593, 54.3589, 3.44092, 86.1346, 112.147, 62.7209, 195.445, -2.17139, 166.256, -65.857, 12.3489, -71.1641, -136.251, -65.857 )
 
 [node name="fondcirque" type="Sprite" parent="decor ilot 2"]
 position = Vector2( -204.074, -142.868 )
 scale = Vector2( 1.11502, 1.11502 )
 z_index = -10
-texture = ExtResource( 26 )
+texture = ExtResource( 28 )
 
 [node name="fondationcirque" type="Sprite" parent="decor ilot 2"]
 position = Vector2( -213.988, 477.945 )
-texture = ExtResource( 27 )
+z_index = -50
+texture = ExtResource( 29 )
 
 [node name="chevalet" type="Sprite" parent="."]
 position = Vector2( -33.2667, 131.733 )
 scale = Vector2( 1.54113, 1.34696 )
 z_index = 20
-texture = ExtResource( 28 )
+texture = ExtResource( 30 )
