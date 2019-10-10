@@ -3,7 +3,7 @@
 [ext_resource path="res://objets/gameManager.tscn" type="PackedScene" id=1]
 [ext_resource path="res://typo/theme.tres" type="Theme" id=2]
 [ext_resource path="res://objets/PanelTexte.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scripts/panelPause.gd" type="Script" id=4]
+[ext_resource path="res://objets/panel pause.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objets/Lautrec.tscn" type="PackedScene" id=5]
 [ext_resource path="res://objets/ilots/ilot depart.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objets/ilots/ilot cirque.tscn" type="PackedScene" id=7]
@@ -23,7 +23,6 @@
 [node name="gameManager" parent="." instance=ExtResource( 1 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 anchor_right = 1.0
@@ -32,46 +31,7 @@ theme = ExtResource( 2 )
 
 [node name="Panel" parent="CanvasLayer/Control" instance=ExtResource( 3 )]
 
-[node name="panel pause" type="Panel" parent="CanvasLayer/Control"]
-pause_mode = 2
-self_modulate = Color( 1, 1, 1, 0.407843 )
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 30.0
-margin_top = 30.0
-margin_right = -30.0
-margin_bottom = -30.0
-script = ExtResource( 4 )
-
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Control/panel pause"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/panel pause/CenterContainer"]
-margin_left = 402.0
-margin_top = 275.0
-margin_right = 562.0
-margin_bottom = 385.0
-
-[node name="Retour" type="Button" parent="CanvasLayer/Control/panel pause/CenterContainer/VBoxContainer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_bottom = -76.0
-shortcut_in_tooltip = false
-text = "Retour"
-
-[node name="Recommencer" type="Button" parent="CanvasLayer/Control/panel pause/CenterContainer/VBoxContainer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 38.0
-margin_bottom = -38.0
-text = "Recommencer"
-
-[node name="Quitter" type="Button" parent="CanvasLayer/Control/panel pause/CenterContainer/VBoxContainer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 76.0
-text = "Quitter"
+[node name="panel pause" parent="CanvasLayer/Control" instance=ExtResource( 4 )]
 
 [node name="Lautrec" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1042.99, 415.39 )
@@ -250,6 +210,3 @@ scale = Vector2( 4.713, -5.24 )
 z_index = -500
 z_as_relative = false
 texture = ExtResource( 17 )
-[connection signal="pressed" from="CanvasLayer/Control/panel pause/CenterContainer/VBoxContainer/Retour" to="CanvasLayer/Control/panel pause" method="_on_Retour_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/panel pause/CenterContainer/VBoxContainer/Recommencer" to="CanvasLayer/Control/panel pause" method="_on_Recommencer_pressed"]
-[connection signal="pressed" from="CanvasLayer/Control/panel pause/CenterContainer/VBoxContainer/Quitter" to="CanvasLayer/Control/panel pause" method="_on_Quitter_pressed"]
