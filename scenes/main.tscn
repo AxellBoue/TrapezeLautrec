@@ -47,6 +47,7 @@ collision_layer = 3
 position = Vector2( 1621.8, -1326.93 )
 
 [node name="fond et bounds" type="Node2D" parent="."]
+editor/display_folded = true
 __meta__ = {
 "_edit_group_": true
 }
