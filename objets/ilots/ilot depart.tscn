@@ -342,6 +342,7 @@ position = Vector2( 1053.63, 174.851 )
 rotation = -0.199941
 z_index = -121
 frames = SubResource( 6 )
+frame = 1
 playing = true
 
 [node name="tutu bas" parent="decor" instance=ExtResource( 41 )]

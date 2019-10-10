@@ -18,7 +18,8 @@ func _on_Retour_pressed():
 	get_tree().paused = false
 
 func _on_Recommencer_pressed():
-	pass # Replace with function body.
+	get_tree().paused = false
+	get_tree().reload_current_scene()
 
 func _on_Quitter_pressed():
-	pass # Replace with function body.
+	get_tree().quit()
