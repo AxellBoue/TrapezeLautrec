@@ -32,6 +32,8 @@ texture = ExtResource( 3 )
 [node name="zone photo" type="Node2D" parent="."]
 script = ExtResource( 4 )
 
+[node name="Timer" type="Timer" parent="zone photo"]
+
 [node name="capte leotard" parent="zone photo" instance=ExtResource( 5 )]
 editor/display_folded = true
 position = Vector2( -404.63, 23.3441 )

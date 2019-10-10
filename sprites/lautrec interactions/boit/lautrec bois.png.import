@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sous titre-3.png-93db69570aa8fee0c63bd1a72be6cb84.stex"
+path="res://.import/lautrec bois.png-eb011c29ff179fc754306de5916d5cf2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/textes/Sous titre-3.png"
-dest_files=[ "res://.import/Sous titre-3.png-93db69570aa8fee0c63bd1a72be6cb84.stex" ]
+source_file="res://sprites/lautrec interactions/boit/lautrec bois.png"
+dest_files=[ "res://.import/lautrec bois.png-eb011c29ff179fc754306de5916d5cf2.stex" ]
 
 [params]
 

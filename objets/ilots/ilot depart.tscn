@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://scripts/ilot.gd" type="Script" id=1]
 [ext_resource path="res://objets/zoneCamera.tscn" type="PackedScene" id=2]
@@ -43,10 +43,10 @@
 [ext_resource path="res://objets/ilots/tutu bas.tscn" type="PackedScene" id=41]
 [ext_resource path="res://scripts/interactions/table.gd" type="Script" id=42]
 [ext_resource path="res://sprites/lautrec interactions/lautrecassis.png" type="Texture" id=43]
-[ext_resource path="res://sprites/lautrec interactions/boit/lautrec bois4.png" type="Texture" id=44]
-[ext_resource path="res://sprites/lautrec interactions/boit/lautrec bois1.png" type="Texture" id=45]
-[ext_resource path="res://sprites/lautrec interactions/boit/lautrec bois2.png" type="Texture" id=46]
-[ext_resource path="res://sprites/lautrec interactions/boit/lautrec bois3.png" type="Texture" id=47]
+[ext_resource path="res://sprites/lautrec interactions/boit/lautrec bois.png" type="Texture" id=44]
+[ext_resource path="res://sprites/lautrec interactions/boit/lautrec bois2.png" type="Texture" id=45]
+[ext_resource path="res://sprites/lautrec interactions/boit/lautrec bois3.png" type="Texture" id=46]
+[ext_resource path="res://sprites/lautrec interactions/boit/lautrec bois4.png" type="Texture" id=47]
 [ext_resource path="res://sprites/lautrec interactions/table.png" type="Texture" id=48]
 [ext_resource path="res://sprites/lautrec interactions/chaiselautrec.png" type="Texture" id=49]
 [ext_resource path="res://sons/chaise.wav" type="AudioStream" id=50]
@@ -56,6 +56,7 @@
 [ext_resource path="res://scripts/interactions/corde.gd" type="Script" id=54]
 [ext_resource path="res://sprites/lautrec interactions/corde.png" type="Texture" id=55]
 [ext_resource path="res://objets/zoneCollQueAPieds.tscn" type="PackedScene" id=56]
+[ext_resource path="res://objets/trappe.tscn" type="PackedScene" id=57]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -147,7 +148,7 @@ animations = [ {
 "name": "assis",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 44 ) ],
+"frames": [ ExtResource( 44 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ) ],
 "loop": false,
 "name": "boit",
 "speed": 5.0
@@ -210,7 +211,6 @@ tracks/0/keys = {
 }
 
 [node name="ilot depart" type="Area2D"]
-editor/display_folded = true
 position = Vector2( 1055.14, 4.58743 )
 script = ExtResource( 1 )
 
@@ -342,15 +342,16 @@ position = Vector2( 1053.63, 174.851 )
 rotation = -0.199941
 z_index = -121
 frames = SubResource( 6 )
-frame = 1
 playing = true
 
 [node name="tutu bas" parent="decor" instance=ExtResource( 41 )]
 position = Vector2( 0, -28.5677 )
 
 [node name="objets" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="table" type="Node2D" parent="objets"]
+editor/display_folded = true
 position = Vector2( 52.6613, 380.246 )
 script = ExtResource( 42 )
 
@@ -381,6 +382,7 @@ volume_db = -20.194
 bus = "bruits"
 
 [node name="objInteractif" parent="objets/table" instance=ExtResource( 14 )]
+editor/display_folded = true
 position = Vector2( -17.1047, 6.51608 )
 interaction = "table"
 
@@ -400,6 +402,7 @@ position = Vector2( 21.2486, -91.2464 )
 frames = SubResource( 3 )
 
 [node name="gramaphone" type="Node2D" parent="objets"]
+editor/display_folded = true
 position = Vector2( -315.182, 364.519 )
 script = ExtResource( 51 )
 
@@ -481,5 +484,7 @@ editor/display_folded = true
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="zoneColl"]
 position = Vector2( 0, -3.05176e-005 )
 polygon = PoolVector2Array( 329.407, 32.7626, -403.726, 44.9207, -400.078, 1.15161, -300.382, -0.064209, 391.413, -6.14325, 397.492, 35.1943 )
+
+[node name="trape" parent="." instance=ExtResource( 57 )]
 [connection signal="animation_finished" from="decor/5plan" to="decor/5plan" method="next_anim"]
 [connection signal="animation_finished" from="objets/table/lautrecAssis" to="objets/table" method="fin_anim"]
