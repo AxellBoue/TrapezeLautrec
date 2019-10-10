@@ -39,7 +39,6 @@
 [node name="gameManager" parent="." instance=ExtResource( 1 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 anchor_right = 1.0
@@ -229,66 +228,82 @@ z_index = -500
 z_as_relative = false
 texture = ExtResource( 17 )
 
-[node name="fond1" type="Sprite" parent="."]
+[node name="affiche1" type="Sprite" parent="."]
 position = Vector2( 1596.91, 1890.24 )
+z_index = -300
 texture = ExtResource( 18 )
 
-[node name="fond2" type="Sprite" parent="."]
+[node name="affiche2" type="Sprite" parent="."]
 position = Vector2( -871.925, -746.595 )
+z_index = -300
 texture = ExtResource( 19 )
 
-[node name="fond3" type="Sprite" parent="."]
+[node name="affiche3" type="Sprite" parent="."]
 position = Vector2( -1962.05, 907.611 )
+z_index = -300
 texture = ExtResource( 20 )
 
-[node name="fond4" type="Sprite" parent="."]
+[node name="affiche4" type="Sprite" parent="."]
 position = Vector2( 325.948, -695.891 )
+z_index = -300
 texture = ExtResource( 21 )
 
-[node name="fond5" type="Sprite" parent="."]
+[node name="affiche5" type="Sprite" parent="."]
 position = Vector2( 959.909, 2351.2 )
+z_index = -300
 texture = ExtResource( 22 )
 
-[node name="fond6" type="Sprite" parent="."]
+[node name="affiche6" type="Sprite" parent="."]
 position = Vector2( -1235.44, 2233.79 )
+z_index = -300
 texture = ExtResource( 23 )
 
-[node name="fond7" type="Sprite" parent="."]
+[node name="affiche7" type="Sprite" parent="."]
 position = Vector2( 522.143, 2094.17 )
+z_index = -300
 texture = ExtResource( 24 )
 
-[node name="fond8" type="Sprite" parent="."]
+[node name="affiche8" type="Sprite" parent="."]
 position = Vector2( -1400.24, -1493.8 )
+z_index = -300
 texture = ExtResource( 25 )
 
-[node name="fond9" type="Sprite" parent="."]
+[node name="affiche9" type="Sprite" parent="."]
 position = Vector2( 2176.63, -1608.56 )
+z_index = -300
 texture = ExtResource( 26 )
 
-[node name="fond10" type="Sprite" parent="."]
+[node name="affiche10" type="Sprite" parent="."]
 position = Vector2( -764.37, 814.345 )
+z_index = -300
 texture = ExtResource( 27 )
 
-[node name="fond11" type="Sprite" parent="."]
+[node name="affiche11" type="Sprite" parent="."]
 position = Vector2( -290.501, -1530.5 )
+z_index = -300
 texture = ExtResource( 28 )
 
-[node name="fond12" type="Sprite" parent="."]
+[node name="affiche12" type="Sprite" parent="."]
 position = Vector2( -1334.95, 1632.9 )
+z_index = -300
 texture = ExtResource( 29 )
 
-[node name="fond13" type="Sprite" parent="."]
+[node name="affiche13" type="Sprite" parent="."]
 position = Vector2( -2148.99, -970.043 )
+z_index = -300
 texture = ExtResource( 30 )
 
-[node name="fond14" type="Sprite" parent="."]
+[node name="affiche14" type="Sprite" parent="."]
 position = Vector2( 2164.62, -623.171 )
+z_index = -300
 texture = ExtResource( 31 )
 
-[node name="fond15" type="Sprite" parent="."]
+[node name="affiche15" type="Sprite" parent="."]
 position = Vector2( -2085.14, 1738.55 )
+z_index = -300
 texture = ExtResource( 32 )
 
-[node name="fond16" type="Sprite" parent="."]
+[node name="affiche16" type="Sprite" parent="."]
 position = Vector2( 2144.49, 1285.95 )
+z_index = -300
 texture = ExtResource( 33 )
