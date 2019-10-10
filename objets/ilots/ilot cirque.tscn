@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://scripts/ilot.gd" type="Script" id=1]
 [ext_resource path="res://objets/zoneCamera.tscn" type="PackedScene" id=2]
@@ -26,7 +26,8 @@
 [ext_resource path="res://sprites/decor/ilot2cirque/animaffiche/affiche9.png" type="Texture" id=24]
 [ext_resource path="res://sprites/decor/ilot2cirque/animaffiche/affiche10.png" type="Texture" id=25]
 [ext_resource path="res://sprites/decor/ilot2cirque/fond cirque.png" type="Texture" id=26]
-[ext_resource path="res://sprites/decor/ilot2cirque/chevalet.png" type="Texture" id=27]
+[ext_resource path="res://sprites/decor/ilot2cirque/fondationcirque/fondationcirque.png" type="Texture" id=27]
+[ext_resource path="res://sprites/decor/ilot2cirque/chevalet.png" type="Texture" id=28]
 
 [sub_resource type="Animation" id=1]
 resource_name = "danseuse"
@@ -146,7 +147,6 @@ position = Vector2( -207.727, 123.179 )
 polygon = PoolVector2Array( 287.739, 96.405, 255.767, 67.7768, 185.378, 44.7404, 102.191, 33.2222, 31.8021, 24.2636, -53.9443, 21.704, -139.691, 34.502, -213.919, 53.699, -263.436, 79.971, -287.896, 95.0233, -270.021, 60.2148, -116.655, -14.1304, 63.7971, -7.73135, 219.933, 5.06662, 271.125, 40.901 )
 
 [node name="decor ilot 2" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 0, 19 )
 
 [node name="violon" type="Sprite" parent="decor ilot 2"]
@@ -175,7 +175,7 @@ z_index = 2
 texture = ExtResource( 7 )
 
 [node name="foule" type="Sprite" parent="decor ilot 2"]
-position = Vector2( -198.058, 292.73 )
+position = Vector2( -198.058, 306.366 )
 scale = Vector2( 0.625453, 0.781843 )
 z_index = 180
 texture = ExtResource( 8 )
@@ -236,8 +236,12 @@ scale = Vector2( 1.11502, 1.11502 )
 z_index = -10
 texture = ExtResource( 26 )
 
+[node name="fondationcirque" type="Sprite" parent="decor ilot 2"]
+position = Vector2( -192.504, 542.49 )
+texture = ExtResource( 27 )
+
 [node name="chevalet" type="Sprite" parent="."]
 position = Vector2( -33.2667, 131.733 )
 scale = Vector2( 1.54113, 1.34696 )
 z_index = 20
-texture = ExtResource( 27 )
+texture = ExtResource( 28 )
