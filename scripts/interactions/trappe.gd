@@ -6,6 +6,7 @@ onready var afficheQueen = get_node("/root/Node2D/ilot depart/decor/afficheQueen
 onready var sm = get_node("/root/Node2D/gameManager/soundManager")
 var sonShow = preload("res://sons/ShowMustGoOn.wav")
 onready var rideaux = get_node("/root/Node2D/ilot depart/decor/rideaux")
+onready var trampo = get_node("trampoline")
 
 var i = 0
 
@@ -18,9 +19,11 @@ func _ready():
 # warning-ignore:unused_argument
 func _on_body_enter(body):
 	timer.start()
+	#trampo.play("bas")
 	
 func saut():
 	lautrec.saut_special()
+	trampo.play("saut")
 	timer.disconnect("timeout",self,"saut")
 	timer.connect("timeout",self,"retour_de_saut")
 	timer.wait_time = 1.5

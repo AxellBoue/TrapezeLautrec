@@ -5,9 +5,7 @@
 [ext_resource path="res://objets/zoneCollQueAPieds.tscn" type="PackedScene" id=3]
 [ext_resource path="res://sprites/decor/ilot cancan/cancangauche.png" type="Texture" id=4]
 
-
 [node name="ilot cabaret" type="Area2D"]
-editor/display_folded = true
 position = Vector2( -306.203, -1188.82 )
 scale = Vector2( 1.5, 1.5 )
 z_index = -50
@@ -19,17 +17,17 @@ texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2( -402.509, -2.77588 )
-polygon = PoolVector2Array( -47.0831, 87.7495, 6.85443, 89.0039, 9.99036, 55.1362, 27.5514, 52.6274, 38.2134, 87.7495, 70.1996, 87.1223, 97.1684, 77.7146, 95.2869, 56.3904, 123.51, 57.6448, 141.071, 78.969, 174.939, 78.3418, 186.855, 95.2757, 387.287, 90.5274, 385.459, 75.2875, 260.492, -33.8296, 233.267, -35.1778, 206.925, -56.502, 169.921, -54.6204, 150.479, -41.4496, 126.646, -37.6865, 94.6597, -37.6865, 39.4678, -27.0245, -28.2676, -0.682922 )
+polygon = PoolVector2Array( -47.0831, 87.7495, 6.85443, 89.0039, 9.99036, 55.1362, 27.5514, 52.6274, 38.2134, 87.7495, 70.1996, 87.1223, 97.1684, 77.7146, 95.2869, 56.3904, 123.51, 57.6448, 141.071, 78.969, 174.939, 78.3418, 186.855, 95.2757, 387.287, 90.5274, 385.459, 75.2875, 260.492, -33.8296, 229.346, -34.4065, 206.925, -56.502, 169.921, -54.6204, 150.479, -41.4496, 126.646, -37.6865, 94.6597, -37.6865, 39.4678, -27.0245, -28.2676, -0.682922 )
 
 [node name="zoneCollFond" parent="." instance=ExtResource( 3 )]
 position = Vector2( -311.081, -65.2267 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="zoneCollFond"]
-polygon = PoolVector2Array( -122.204, 54.869, -53.8413, 29.1545, -0.531006, 19.1198, 53.4065, 15.3566, 73.4763, 0.931519, 116.752, -0.322876, 102.954, -14.748, 41.4901, -16.0024, -100.88, 22.2556, -126.594, 38.5623 )
+polygon = PoolVector2Array( -122.204, 54.869, -53.8413, 29.1545, -0.531006, 19.1198, 53.4065, 15.3566, 73.4763, 0.931519, 117.461, 1.57111, 109.038, -14.0722, 41.4901, -16.0024, -100.88, 22.2556, -126.594, 38.5623 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="zoneCollFond"]
 position = Vector2( 150.882, 14.3698 )
-polygon = PoolVector2Array( 17.2882, 7.42505, -3.37503, 7.98444, 1.86972, 1.63556, 14.0154, 1.91162 )
+polygon = PoolVector2Array( 14.7124, 9.46289, -10.5592, 9.46265, -12.9659, 0.437622, 14.0154, 1.91162 )
 
 [node name="cancangauche" type="Sprite" parent="."]
 position = Vector2( 294.372, -48.2672 )
