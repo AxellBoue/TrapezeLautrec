@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fond.png-02cf439a46c075cf3a12645494d27e1e.stex"
+path="res://.import/lautrec bois2.png-e353cf338ab2f645fe8dbeacf5335db8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/decor/fond.png"
-dest_files=[ "res://.import/fond.png-02cf439a46c075cf3a12645494d27e1e.stex" ]
+source_file="res://sprites/lautrec interactions/boit/lautrec bois2.png"
+dest_files=[ "res://.import/lautrec bois2.png-e353cf338ab2f645fe8dbeacf5335db8.stex" ]
 
 [params]
 
