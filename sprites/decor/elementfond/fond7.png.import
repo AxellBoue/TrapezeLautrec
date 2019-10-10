@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fond7.png-905a4294fae8b786e144a4c11b6f98dd.stex"
+path="res://.import/fond7.png-83a2e5a3fdfde2aa90631b8719dec734.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/elementfond/fond7.png"
-dest_files=[ "res://.import/fond7.png-905a4294fae8b786e144a4c11b6f98dd.stex" ]
+source_file="res://sprites/decor/elementfond/fond7.png"
+dest_files=[ "res://.import/fond7.png-83a2e5a3fdfde2aa90631b8719dec734.stex" ]
 
 [params]
 
