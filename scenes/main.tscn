@@ -47,7 +47,6 @@ collision_layer = 3
 position = Vector2( 1621.8, -1326.93 )
 
 [node name="fond et bounds" type="Node2D" parent="."]
-editor/display_folded = true
 __meta__ = {
 "_edit_group_": true
 }
@@ -88,12 +87,12 @@ horizontal = false
 position = Vector2( -359.504, 4922.08 )
 
 [node name="fond déco" type="Node2D" parent="fond et bounds"]
-editor/display_folded = true
 position = Vector2( 1093.99, 427.107 )
 rotation = 0.481195
 z_index = -450
 
 [node name="dernierplan2" type="Sprite" parent="fond et bounds/fond déco"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( -1437.39, 2121.38 )
 rotation = -0.756591
@@ -101,6 +100,7 @@ texture = ExtResource( 11 )
 offset = Vector2( 0.000244141, -954.937 )
 
 [node name="dernierplan7" type="Sprite" parent="fond et bounds/fond déco"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( -1026.02, 1674.71 )
 rotation = -0.756591
@@ -109,6 +109,7 @@ texture = ExtResource( 11 )
 offset = Vector2( 0.000244141, -954.937 )
 
 [node name="dernierplan5" type="Sprite" parent="fond et bounds/fond déco"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( 422.421, 1001.67 )
 rotation = -2.68283
@@ -116,6 +117,7 @@ texture = ExtResource( 11 )
 offset = Vector2( 0.000244141, -954.937 )
 
 [node name="dernierplan6" type="Sprite" parent="fond et bounds/fond déco"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( 204.135, -428.652 )
 rotation = -2.68283
@@ -123,17 +125,20 @@ texture = ExtResource( 11 )
 offset = Vector2( 0.000244141, -954.937 )
 
 [node name="dernierplan4" type="Sprite" parent="fond et bounds/fond déco"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.129412 )
 position = Vector2( -2571.56, 272.984 )
 rotation = -0.756591
 texture = ExtResource( 11 )
 
 [node name="queen moyen" type="Sprite" parent="fond et bounds/fond déco"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.345098 )
 position = Vector2( -2012.29, 60.4302 )
 texture = ExtResource( 12 )
 
 [node name="Cancan(1)" type="Sprite" parent="fond et bounds/fond déco"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.709804 )
 position = Vector2( 1044.76, 842.329 )
 rotation = -0.191668
@@ -141,6 +146,7 @@ scale = Vector2( 3.42606, 4.15117 )
 texture = ExtResource( 13 )
 
 [node name="queen moyen2" type="Sprite" parent="fond et bounds/fond déco"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.345098 )
 position = Vector2( -2161.62, 2508.36 )
 rotation = -0.838785
@@ -148,10 +154,12 @@ scale = Vector2( 0.648039, 0.648039 )
 texture = ExtResource( 12 )
 
 [node name="dernierplan3" type="Sprite" parent="fond et bounds/fond déco"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.227451 )
 texture = ExtResource( 11 )
 
 [node name="Cirque2" type="Sprite" parent="fond et bounds/fond déco"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.352941 )
 position = Vector2( -1479.62, 1817.72 )
 rotation = -0.0856285
@@ -159,6 +167,7 @@ scale = Vector2( 0.236365, 0.236365 )
 texture = ExtResource( 14 )
 
 [node name="Cirque4" type="Sprite" parent="fond et bounds/fond déco"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.164706 )
 position = Vector2( -1562.48, 1483.99 )
 rotation = -0.885835
@@ -167,6 +176,7 @@ texture = ExtResource( 15 )
 offset = Vector2( -672.091, -0.000732422 )
 
 [node name="Cirque5" type="Sprite" parent="fond et bounds/fond déco"]
+visible = false
 self_modulate = Color( 1, 1, 1, 0.164706 )
 position = Vector2( -1562.48, 1483.99 )
 rotation = -0.242204
